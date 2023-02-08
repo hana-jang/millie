@@ -136,7 +136,7 @@ header {
   overflow: hidden;
 }
 .slide-box .first-slide {
-  background: url("/img/slide-ani.png") repeat-x;
+  background: url("../img/slide-ani.png") repeat-x;
   height: 218px;
   margin-bottom: 30px;
   animation-name: slide;
@@ -145,7 +145,7 @@ header {
   animation-timing-function: linear;
 }
 .slide-box .second-slide {
-  background: url("/img/slide-ani1.png") repeat-x;
+  background: url("../img/slide-ani1.png") repeat-x;
   height: 218px;
   margin-bottom: 30px;
   animation-name: slide1;
@@ -154,7 +154,7 @@ header {
   animation-timing-function: linear;
 }
 .slide-box .third-slide {
-  background: url("/img/slide-ani2.png") repeat-x;
+  background: url("../img/slide-ani2.png") repeat-x;
   height: 218px;
   margin-bottom: 80px;
   animation-name: slide;

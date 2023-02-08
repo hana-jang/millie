@@ -95,21 +95,21 @@
     overflow: hidden;
 
     .first-slide{
-        background:url("/img/slide-ani.png") repeat-x;
+        background:url("../img/slide-ani.png") repeat-x;
         height:218px;
         margin-bottom:30px;
         @include slide-animation
     }
 
     .second-slide{
-        background:url("/img/slide-ani1.png") repeat-x;
+        background:url("../img/slide-ani1.png") repeat-x;
         height:218px;
         margin-bottom:30px;
         @include slide-animation1
     }
 
     .third-slide{
-        background:url("/img/slide-ani2.png") repeat-x;
+        background:url("../img/slide-ani2.png") repeat-x;
         height:218px;
         margin-bottom:80px;
         @include slide-animation
