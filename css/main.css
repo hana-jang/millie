@@ -25,6 +25,12 @@ h2 {
   font-family: "Spoqa Han Sans", "Spoqa Han Sans JP", "Sans-serif";
 }
 
+@font-face {
+  font-family: "SUIT-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 header {
   width: 100%;
   position: fixed;
@@ -213,15 +219,13 @@ header {
   padding-bottom: 50px;
 }
 #first-call-book .first-call-book-wrap {
-  width: 1200px;
+  width: 1159px;
   margin: 0 auto;
   height: 900px;
-  background-color: lightcyan;
 }
 #first-call-book .first-call-book-wrap .best-all-box {
-  width: 1200px;
+  width: 1159px;
   margin: 0 auto;
-  background-color: limegreen;
 }
 #first-call-book .first-call-book-wrap .best-all-box h3 {
   text-align: left;
@@ -241,7 +245,17 @@ header {
   border-bottom-right-radius: 5px;
 }
 #first-call-book .first-call-book-wrap .best-all-box .best-book-wrap .best-box h4 {
-  width: 155px;
+  width: 145px;
+  height: 40px;
+  margin: 0 0 10px 10px;
+  text-align: left;
+  font-family: "SUIT-Regular";
+}
+#first-call-book .first-call-book-wrap .best-all-box .best-book-wrap .best-box h5 {
+  margin: 0 0 10px 10px;
+  text-align: left;
+  color: #888888;
+  font-family: "SUIT-Regular";
 }
 #first-call-book .first-call-book-wrap .best-all-box .best-book-wrap .best-box:nth-of-type(3) {
   position: relative;
@@ -276,7 +290,6 @@ header {
 #first-call-book .first-call-book-wrap .new-all-box {
   width: 1200px;
   margin: 0 auto;
-  background-color: lightsalmon;
 }
 #first-call-book .first-call-book-wrap .new-all-box h3 {
   text-align: left;
@@ -296,5 +309,11 @@ header {
   border-bottom-right-radius: 5px;
 }
 #first-call-book .first-call-book-wrap .new-all-box .new-book-wrap .new-box h4 {
-  width: 155px;
+  width: 150px;
+  margin-left: 10px;
+  text-align: left;
+  font-family: "SUIT-Regular";
+}
+#first-call-book .first-call-book-wrap .new-all-box .new-book-wrap .new-box h6 {
+  font-family: "SUIT-Regular";
 }

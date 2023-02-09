@@ -109,7 +109,7 @@
                 for (var i = 0; i < box.length; i++) {
                     $(".best-box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>"+"</a>");
                     $(".best-box").eq(i).append("<h4>"  + msg.documents[i].title + "</h4>");
-                    $(".best-box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
+                    $(".best-box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     $(".best-box").eq(2).append("<img src='img/audio-icon.png' class='best-box-icon'>");
                     $(".best-box").eq(2).append("<img src='img/allread.png' class='best-box-icon1'>");
                 }
@@ -124,7 +124,7 @@
                 console.log(msg);
                     $(".best-box").eq(3).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
                     $(".best-box").eq(3).append("<h4>"  + msg.documents[0].title + "</h4>");
-                    $(".best-box").eq(3).append("<h6>" + msg.documents[0].authors + "</h6>");
+                    $(".best-box").eq(3).append("<h5>" + msg.documents[0].authors + "</h5>");
             });
             $.ajax({
             method: "GET",
@@ -136,7 +136,7 @@
                 console.log(msg);
                     $(".best-box").eq(4).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
                     $(".best-box").eq(4).append("<h4>"  + msg.documents[0].title + "</h4>");
-                    $(".best-box").eq(4).append("<h6>" + msg.documents[0].authors + "</h6>");
+                    $(".best-box").eq(4).append("<h5>" + msg.documents[0].authors + "</h5>");
             });
             $.ajax({
             method: "GET",
@@ -150,7 +150,7 @@
                 var str2=str.substring(0,16);
                     $(".best-box").eq(5).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
                     $(".best-box").eq(5).append("<h4>"  + str2+ "</h4>");
-                    $(".best-box").eq(5).append("<h6>" + msg.documents[0].authors + "</h6>");
+                    $(".best-box").eq(5).append("<h5>" + msg.documents[0].authors + "</h5>");
                     $(".best-box").eq(5).append("<img src='img/audio-icon.png' class='best-box-icon'>");
                     $(".best-box").eq(5).append("<img src='img/allread.png' class='best-box-icon1'>");
             });
@@ -164,7 +164,7 @@
                 console.log(msg);
                     $(".best-box").eq(6).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
                     $(".best-box").eq(6).append("<h4>"  + msg.documents[0].title + "</h4>");
-                    $(".best-box").eq(6).append("<h6>" + msg.documents[0].authors + "</h6>");
+                    $(".best-box").eq(6).append("<h5>" + msg.documents[0].authors + "</h5>");
                     
 
             });
