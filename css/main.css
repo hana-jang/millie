@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "SUIT-Regular";
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
 ul, ol, li {
@@ -16,15 +16,10 @@ a {
 
 h2 {
   font-size: 48px;
+  font-weight: bold;
   padding: 70px 0 30px 0;
 }
 
-@font-face {
-  font-family: "SUIT-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
 header {
   width: 100%;
   position: fixed;
@@ -33,7 +28,7 @@ header {
 }
 
 .header-box {
-  height: 65px;
+  height: 64px;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
@@ -41,28 +36,28 @@ header {
 }
 
 .logo {
-  margin: 20px 50px;
+  margin: 20px 0;
 }
 .logo img {
-  max-width: 60px;
+  max-width: 56px;
 }
 
 .nav {
   display: flex;
+  align-items: center;
 }
 .nav li {
-  line-height: 65px;
-  padding: 0 30px;
+  padding: 20px;
   font-size: 16px;
   cursor: pointer;
 }
 .nav li button {
-  padding: 5px 15px;
+  padding: 7px 25px;
   border: none;
   background-color: #333;
   color: #fff;
   border-radius: 40px;
-  font-size: 16px;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -87,7 +82,7 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-20%, -50%);
+  transform: translate(-27%, -50%);
 }
 .slider-box img:nth-of-type(2) {
   width: 350px;
@@ -96,10 +91,10 @@ header {
   left: 140px;
 }
 .slider-box img:nth-of-type(3) {
-  width: 220px;
+  width: 180px;
   position: absolute;
   bottom: 120px;
-  left: 140px;
+  left: 146px;
 }
 
 @keyframes slide {
@@ -125,7 +120,7 @@ header {
   text-align: center;
 }
 .booklist p {
-  font-size: 23px;
+  font-size: 22px;
   line-height: 30px;
   padding-bottom: 50px;
 }
@@ -173,16 +168,15 @@ header {
   height: 900px;
   margin: 0 auto;
   text-align: center;
-  background-color: snow;
 }
 .video .video-box p {
-  font-size: 23px;
+  font-size: 22px;
   line-height: 30px;
   padding-bottom: 50px;
 }
 .video .video-box .video-img-box {
-  width: 700px;
-  height: 394px;
+  width: 730px;
+  height: 411px;
   margin: 0 auto;
   position: relative;
 }
@@ -208,8 +202,22 @@ header {
   width: 100%;
   text-align: center;
 }
-.best .best-box p {
-  font-size: 23px;
+.best p {
+  font-size: 22px;
   line-height: 30px;
   padding-bottom: 50px;
+}
+.best .best-all-box {
+  width: 1400px;
+  height: 900px;
+  margin: 0 auto;
+  background-color: lightcyan;
+  display: flex;
+  justify-content: space-between;
+}
+.best .best-all-box .best-box {
+  width: 100%;
+  height: 350px;
+  margin: 15px;
+  background-color: pink;
 }

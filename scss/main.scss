@@ -14,11 +14,19 @@
     position:absolute;
     top:$center;
     left:$center;
-    transform:translate($left, -$center);
+    transform:translate(-$left,-$center);
+}
+
+@mixin transform1($x, $y){
+    $center:50%;
+    position:absolute;
+    top:$center;
+    left:$center;
+    transform:translate($x, $y);
 }
 
 @mixin p_style{
-    font-size: 23px;
+    font-size: 22px;
     line-height: 30px;
     padding-bottom:50px;
 }
@@ -39,7 +47,7 @@
 
     img:nth-of-type(1){
         width:800px;
-        @include transform(-20%);
+        @include transform1(-27%, -50%);
     }
 
     img:nth-of-type(2){
@@ -50,10 +58,10 @@
     }
 
     img:nth-of-type(3){
-        width:220px;
+        width:180px;
         position:absolute;
         bottom:120px;
-        left:140px;
+        left:146px;
     }
 }
 
@@ -126,15 +134,14 @@
         height:900px;
         margin:0 auto;
         text-align: center;
-        background-color:snow;
 
         p{
             @include p_style;
         }
 
         .video-img-box{
-            width:700px;
-            height:394px;
+            width:730px;
+            height:411px;
             margin:0 auto;
             position:relative;
             img:first-child{
@@ -158,9 +165,21 @@
 .best{
     width:100%;
     text-align: center;
-    .best-box{
-        p{
-            @include p_style;
+    p{
+        @include p_style;
+    }
+    .best-all-box{
+        width:1400px;
+        height:900px;
+        margin:0 auto;
+        background-color:lightcyan;
+        display:flex;
+        justify-content: space-between;
+        .best-box{
+            width:100%;
+            height:350px;
+            margin:15px;
+            background-color:pink;
         }
     }
     
