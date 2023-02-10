@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="audio-all-box">
-                    <h3>한 달 이내 출간된 책</h3>
+                    <h3>오디오북 BEST</h3>
                     <div class="audio-book-wrap">
                         <div class="audio-box"></div>
                         <div class="audio-box"></div>
@@ -92,9 +92,22 @@
                         <div class="audio-box"></div>
                     </div>
                 </div>
+                <div class="romance-all-box">
+                    <h3>밀리 독점 오리지널 로맨스</h3>
+                    <div class="romance-book-wrap">
+                        <div class="romance-box"></div>
+                        <div class="romance-box"></div>
+                        <div class="romance-box"></div>
+                        <div class="romance-box"></div>
+                        <div class="romance-box"></div>
+                        <div class="romance-box"></div>
+                        <div class="romance-box"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <script> //베스트셀러
+        <script> //베스트셀러 best-box
+            //1~3번 박스
             $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
@@ -102,50 +115,47 @@
             headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
         })
             .done(function (msg) {
-                console.log(msg);
-
+                // console.log(msg);
                 var box = document.getElementsByClassName('best-box');
 
-                for (var i = 0; i < box.length; i++) {
-                    $(".best-box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>"+"</a>");
+                for (var i = 0; i < 3; i++) {
+                    // 3개밖에 없어서 굳이 box.length로 할 필요 없음
+                    $(".best-box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
                     $(".best-box").eq(i).append("<h4>"  + msg.documents[i].title + "</h4>");
                     $(".best-box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     $(".best-box").eq(2).append("<img src='img/audio-icon.png' class='best-box-icon'>");
                     $(".best-box").eq(2).append("<img src='img/allread.png' class='best-box-icon1'>");
                 }
             });
-            $.ajax({
+            $.ajax({ // 4번 박스
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
             data: { query: "이 사랑이" },
             headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
         })
             .done(function (msg) {
-                console.log(msg);
                     $(".best-box").eq(3).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
                     $(".best-box").eq(3).append("<h4>"  + msg.documents[0].title + "</h4>");
                     $(".best-box").eq(3).append("<h5>" + msg.documents[0].authors + "</h5>");
             });
-            $.ajax({
+            $.ajax({ // 5번 박스
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
             data: { query: "세이노" },
             headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
         })
             .done(function (msg) {
-                console.log(msg);
                     $(".best-box").eq(4).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
                     $(".best-box").eq(4).append("<h4>"  + msg.documents[0].title + "</h4>");
                     $(".best-box").eq(4).append("<h5>" + msg.documents[0].authors + "</h5>");
             });
-            $.ajax({
+            $.ajax({ //6번 박스
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
             data: { query: "만일 내가 인생을 다시 산다면" },
             headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
         })
             .done(function (msg) {
-                console.log(msg);
                 var str=msg.documents[0].title;
                 var str2=str.substring(0,16);
                     $(".best-box").eq(5).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
@@ -154,22 +164,19 @@
                     $(".best-box").eq(5).append("<img src='img/audio-icon.png' class='best-box-icon'>");
                     $(".best-box").eq(5).append("<img src='img/allread.png' class='best-box-icon1'>");
             });
-            $.ajax({
+            $.ajax({ //7번 박스
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
             data: { query: "우리는 모두 죽는다는 것을" },
             headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
         })
             .done(function (msg) {
-                console.log(msg);
                     $(".best-box").eq(6).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
                     $(".best-box").eq(6).append("<h4>"  + msg.documents[0].title + "</h4>");
                     $(".best-box").eq(6).append("<h5>" + msg.documents[0].authors + "</h5>");
-                    
-
             });
         </script>
-        <script> // 신상
+        <script> // 한 달 이내 출간된 책 new-box
             $.ajax({
                 method: "GET",
                 url: "https://dapi.kakao.com/v3/search/book?target=publisher",
@@ -177,20 +184,225 @@
                 headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
             })
                 .done(function (msg) {
-                    console.log(msg);
+                    var box1 = document.getElementsByClassName('new-box');
 
-                    var box = document.getElementsByClassName('best-box');
-
-                    for (var i = 0; i < box.length; i++) {
+                    for (var i = 0; i < box1.length; i++) {
                         $(".new-box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
                         $(".new-box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
-                        $(".new-box").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
+                        $(".new-box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     }
                 });
         </script>
-        <div class="choice"></div>
-        <div class="pick"></div>
-        <div class="price"></div>
+        <script> // 오디오북 best
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=publisher",
+                data: { query: "팩토리나인" },
+                headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
+            })
+                .done(function (msg) {
+                    var box2 = document.getElementsByClassName('audio-box');
+
+                    for (var i = 0; i < box2.length; i++) {
+                        $(".audio-box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".audio-box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".audio-box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                    }
+                });
+        </script>
+        <script> // 독점 로맨스소설
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=publisher",
+                data: { query: "나무옆의자" },
+                headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
+            })
+                .done(function (msg) {
+                    var box3 = document.getElementsByClassName('romance-box');
+
+                    for (var i = 0; i < box3.length; i++) {
+                        $(".romance-box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".romance-box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".romance-box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                    }
+                });
+        </script>
+        <div id="second-call-book">
+            <h2>관심 분야에 있는 책도<br> 딱 골라드려요</h2>
+            <p>검색어 순위를 통해 뽑은<br>인기 분야 책들을 확인해보세요</p>
+            <div class="second-call-book-ul-wrap">
+                <ul class="second-call-book-title">
+                    <li>주식</li>
+                    <li>영어</li>
+                    <li>추리</li>
+                    <li>부동산</li>
+                    <li>운동</li>
+                </ul>
+            </div>
+            <div class="second-call-book-wrap">
+                <div class="money-all-box book-click">
+                    <div class="money-book-wrap">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="english-all-box book-click">
+                    <div class="english-book-wrap">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="higasino-all-box book-click">
+                    <div class="higasino-book-wrap">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="budongsan-all-box book-click">
+                    <div class="budongsan-book-wrap">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="exercise-all-box book-click">
+                    <div class="exercise-book-wrap">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script> // 주식
+            $.ajax({ 
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "주식" },
+                headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
+            })
+                .done(function (msg) {
+                    for (var i = 0; i < 7; i++) {
+                        $(".money-book-wrap>.box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".money-book-wrap>.box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".money-book-wrap>.box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                    }
+                });
+        </script>
+        <script> // 영어
+            $.ajax({ 
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "영어" },
+                headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
+            })
+                .done(function (msg) {
+                    for (var i = 0; i <7; i++) {
+                        $(".english-book-wrap>.box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".english-book-wrap>.box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".english-book-wrap>.box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                    }
+                });
+        </script>
+        <script> // 추리
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=authors",
+                data: { query: "히가시노게이고" },
+                headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
+            })
+                .done(function (msg) {
+                    for (var i = 0; i < 7; i++) {
+                        $(".higasino-book-wrap>.box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".higasino-book-wrap>.box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".higasino-book-wrap>.box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                    }
+                });
+        </script>
+        <script> // 부동산
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "부동산" },
+                headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
+            })
+                .done(function (msg) {
+                    for (var i = 0; i < 7; i++) {
+                        $(".budongsan-book-wrap>.box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".budongsan-book-wrap>.box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".budongsan-book-wrap>.box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                    }
+                });
+        </script>
+        <script> // 운동
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "운동" },
+                headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
+            })
+                .done(function (msg) {
+                    for (var i = 0; i < 7 ; i++) {
+                        $(".exercise-book-wrap>.box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".exercise-book-wrap>.box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+                        $(".exercise-book-wrap>.box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
+                    }
+                });
+        </script>
+        <div id="pick">
+            <h2>당신이 끝까지 읽을 책을<br>알려주는 완독지수</h2>
+            <p>350만 밀리 회원이 먼저 읽고<br>다 읽을 확률과 예상 시간을 알려드려요</p>
+            <div class="pick-img-box">
+                <img src="img/millie-pick.png" alt="millie-pick-phone">
+                <img src="img/millie-pick1.png" alt="millie-pick1">
+                <img src="img/pick.png" alt="pick">
+                <img src="img/pick-1.png" alt="pick1">
+                <img src="img/pick-2.png" alt="pick2">
+                <img src="img/pick-3.png" alt="pick3">
+            </div>
+        </div>
+        <div id="price">
+            <h2>언제든 해지 가능!<br>첫 달 무료로 가볍게</h2>
+            <p>상황에 맞게 원하는 요금제를<br>자유롭게 선택하세요</p>
+            <div class="price-box-wrap">
+                <div class="price-box">
+                    <div class="price-one-box"></div>
+                    <div class="price-two-box"></div>
+                    <div class="price-third-box">
+                        <div class="coupon">
+                            <img src="img/ticket.png" alt="ticket">
+                        </div>
+                        <div class="money-back">
+                            <img src="img/price.png
+                            " alt="price">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="audiobook"></div>
         <div class="review"></div>
         <div class="question"></div>
