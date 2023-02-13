@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
     <script src="js/index.js"></script>
+    <!-- swiper cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -48,7 +51,6 @@
                     <img src="img/video-thum.jpg" alt="video-thum">
                     <iframe src="" frameborder="0" width="100%" height="100%"  autoplay></iframe>
                     <img src="img/playbtn.png" alt="playbtn" class="playbtn">
-                    </a>
                 </div>
             </div>
         </div>
@@ -232,11 +234,11 @@
             <p>검색어 순위를 통해 뽑은<br>인기 분야 책들을 확인해보세요</p>
             <div class="second-call-book-ul-wrap">
                 <ul class="second-call-book-title">
-                    <li>주식</li>
-                    <li>영어</li>
-                    <li>추리</li>
-                    <li>부동산</li>
-                    <li>운동</li>
+                    <li><button>주식</button></li>
+                    <li><button>영어</button></li>
+                    <li><button>추리</button></li>
+                    <li><button>부동산</button></li>
+                    <li><button>운동</button></li>
                 </ul>
             </div>
             <div class="second-call-book-wrap">
@@ -389,22 +391,208 @@
             <p>상황에 맞게 원하는 요금제를<br>자유롭게 선택하세요</p>
             <div class="price-box-wrap">
                 <div class="price-box">
-                    <div class="price-one-box"></div>
-                    <div class="price-two-box"></div>
+                    <div class="price-one-box">
+                        <p>전자책 정기구독</p>
+                        <div>
+                            <p><span>월 </span>9,900<span>원</span></p>
+                        </div>
+                        <div>
+                            <p>118,800원</p>
+                            <img src="img/discount.png" alt="discount">
+                        </div>
+                        <div>
+                            <p><span>연 </span>99,000<span>원</span></p>
+                        </div>
+                        <p>밀리에서 제공하는 콘텐츠를 무제한으로</p>
+                    </div>
+                    <div class="price-two-box">
+                        <p>종이책 정기구독</p>
+                        <div>
+                            <p><span>월 </span>15,900<span>원</span></p>
+                        </div>
+                        <div>
+                            <p>202,800원</p>
+                            <img src="img/discount-1.png" alt="discount">
+                        </div>
+                        <div><p><span>연 </span>183,000<span>원</span></p></div>
+                        <p>밀리의 모든 콘텐츠를 무제한으로 보고<br>
+                            2달에 1번 종이책+전자책 배송까지</p>
+                    </div>
+                    
                     <div class="price-third-box">
                         <div class="coupon">
                             <img src="img/ticket.png" alt="ticket">
+                            <p>무료 체험 기간 동안 해지해도<br>
+                                금액이 청구되지 않아요</p>
                         </div>
                         <div class="money-back">
                             <img src="img/price.png
                             " alt="price">
+                            <p>유료 결제되어도 사용 이력이<br>
+                                없으면 즉시 환불해드려요</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="audiobook"></div>
-        <div class="review"></div>
+        <div id="audiobook">
+            <div class="audiobook-list">
+                <ul>
+                    <li class="audiobook-list-click">
+                        <img src="img/headphone.png" alt="headphone"><br>
+                        오디오북
+                    </li>
+                    <li>
+                        <img src="img/viewer.png" alt="viewer"><br>
+                        밀리뷰어
+                    </li>
+                </ul>
+            </div>
+            <div class="audiobook-wrap">
+                <div class="audiobook-main-wrap">
+                    <div class="audiobook-main">
+                        <div class="audio-main-first-wrap">
+                            <div class="audio-main-first">
+                                <img src="img/headphone-yellow.png" alt="headphone">
+                                <h2>오디오북</h2>
+                                <p>세상에서 가장<br> 교양있는 수면제</p>
+                            </div>
+                            <div class="audiobook-phone">
+                                <img src="img/phone.png" alt="phone" class="phone-img">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <img src="img/phone-bg.png" class="swiper-slide" alt="phone-bg">
+                                        <video src="img/audio.mp4" autoplay muted loop class="swiper-slide"></video>
+                                        <img src="img/audiobook.png" class="swiper-slide" alt="audiobook">
+                                        <img src="img/audiobook-reader.png" class="swiper-slide" alt="audiobook-reader">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="audio-main-sec">
+                            <div class="main-sec-box1 sec-box">
+                                <p><b>하루의 시작과 마무리를 오디오북과 함께</b><br>
+                                    지하철에서도, 잠들기 전에도 독서하세요
+                                </p>
+                            </div>
+                            <div class="main-sec-box2 sec-box">
+                                <p><b>귀로 듣다가 눈으로도 같이 보면</b><br>
+                                    더 내용이 잘 이해돼요
+                                </p>
+                            </div>
+                            <div class="main-sec-box3 sec-box">
+                                <p><b>30분만에 책 요약</b><br>
+                                    핵심만 쏙 골라 읽어주는 오디오북
+                                </p>
+                            </div>
+                            <div class="main-sec-box4 sec-box">
+                                <p><b>이제훈부터 옥주현까지</b><br>
+                                    셀럽이 읽어주는 오디오북
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="audiobook-main-wrap viewer-wrap">
+                    <div class="audiobook-main">
+                        <div class="audio-main-first-wrap">
+                            <div class="audio-main-first">
+                                <img src="img/headphone-yellow.png" alt="headphone">
+                                <h2>밀리 뷰어</h2>
+                                <p>독서를 위한 가장<br> 완벽한 도구</p>
+                            </div>
+                            <div class="audiobook-phone">
+                                <img src="img/phone.png" alt="phone" class="phone-img">
+                                <div class="swiper1 mySwiper1">
+                                    <div class="swiper-wrapper">
+                                        <video src="img/audio-1.mp4" autoplay muted loop class="swiper-slide"></video>
+                                        <img src="img/audiobook1.png" class="swiper-slide" alt="audiobook">
+                                        <video src="img/audio-2.mp4" class="swiper-slide"autoplay muted loop></video>
+                                        <video src="img/audio-3.mp4" class="swiper-slide" autoplay muted loop>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="audio-main-sec viewer-main-sec">
+                            <div class="main-sec-box1 sec-box1">
+                                <p><b>시선 추적 기능</b><br>
+                                    눈동자로 페이지를 넘길 수 있어요
+                                </p>
+                            </div>
+                            <div class="main-sec-box2 sec-box1">
+                                <p><b>어느 기기에서도 OK</b><br>
+                                    스마트폰, 태블릿, PC, E ink 기기까지
+                                </p>
+                            </div>
+                            <div class="main-sec-box3 sec-box1">
+                                <p><b>다크 모드</b><br>
+                                    전자책이 눈 아프다는 편견은 버려요
+                                </p>
+                            </div>
+                            <div class="main-sec-box4 sec-box1">
+                                <p><b>자유로운 보기 설정</b><br>
+                                    줄간격부터 폰트까지 내 마음대로 설정하면<br>
+                                    더욱 편한 독서를 할 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination1 swiper-button"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+              renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+              },
+            },
+            on: {
+                  slideChange: function () {
+                      var has = $(".swiper-pagination-bullet-active").index();
+                    //   console.log(has);
+
+                      $(".sec-box").eq(has).show();
+                      $(".sec-box").eq(has).siblings().hide();
+                  },
+              }
+          });
+
+          var swiper = new Swiper(".mySwiper1", {
+            pagination: {
+              el: ".swiper-pagination1",
+              clickable: true,
+              renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+              },
+            },
+            on: {
+                  slideChange: function () {
+                      var has = $(".swiper-pagination1 .swiper-pagination-bullet-active").index();
+                      console.log(has);
+
+                      $(".sec-box1").eq(has).show();
+                      $(".sec-box1").eq(has).siblings().hide();
+                  },
+              }
+          });
+        </script>
+        <div id="review">
+            <div class="review-wrap">
+                <div class="review-img-box">
+                    <img src="img/video-thum1.jpg" alt="video-thum">
+                    <iframe width="415px" height="415px" src="" frameborder="0" autoplay></iframe>
+                    <img src="img/playbtn.png" alt="playbtn" class="playbtn1">
+                </div>
+            </div>
+        </div>
         <div class="question"></div>
         <div class="fixbtn"></div>
     </div>
