@@ -1,13 +1,13 @@
 $(function(){
     $(".video-img-box img").on("click",function(){
         $(this).hide();
-        $(this).next().attr("src","https://www.youtube.com/embed/u1OVbU4EdwI?autoplay=1&mute=1").show();
+        $(this).next().show();
         $(".playbtn").hide();
     });
     $(".playbtn").on("click",function(){
         $(this).hide;
         $(".video-img-box img").hide();
-        $(this).prev().attr("src","https://www.youtube.com/embed/u1OVbU4EdwI?autoplay=1&mute=1").show();
+        $(this).prev().show();
     });
 
     $(".second-call-book-title li").click(function(){
@@ -32,10 +32,20 @@ $(function(){
 
     });
 
-
     $(".review-wrap img").on("click",function(){
         $(this).hide();
-        $(this).next().attr("src","https://www.youtube.com/embed/c-XG8k_w1LM?autoplay=1&mute=1").show();
+        $(this).next().show();
         $(".playbtn1").hide();
-    })
+    });
+    $(".playbtn1").click(function(){
+        $(this).hide();
+        $(".review-img-box img").hide();
+        $(this).prev().show()
+    });
+
+    $(".qna-list li").click(function(){
+        $(this).children(".answer").slideToggle(250);
+        $(this).children().children(".openbtn").toggleClass("openbtn-rotate");
+    });
+
 });

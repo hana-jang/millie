@@ -45,31 +45,34 @@ header {
   width: 100%;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.8);
-  z-index: 30;
+  z-index: 5;
 }
-header .header-box {
+
+.header-box {
   height: 64px;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
 }
-header .header-box .logo {
+
+.logo {
   margin: 20px 0;
 }
-header .header-box .logo img {
+.logo img {
   max-width: 56px;
 }
-header .header-box .nav {
+
+.nav {
   display: flex;
   align-items: center;
 }
-header .header-box .nav li {
+.nav li {
   padding: 20px;
   font-size: 16px;
   cursor: pointer;
 }
-header .header-box .nav li button {
+.nav li button {
   padding: 7px 25px;
   border: none;
   background-color: #333;
@@ -142,16 +145,13 @@ header .header-box .nav li button {
   line-height: 30px;
   padding-bottom: 50px;
 }
-#booklist .booklist-wrap {
-  margin: 0 auto;
-  padding: 80px 24px;
-}
-#booklist .booklist-wrap .slide-box {
-  max-width: 100%;
+
+.slide-box {
+  width: 1855px;
   margin: 0 auto;
   overflow: hidden;
 }
-#booklist .booklist-wrap .slide-box .first-slide {
+.slide-box .first-slide {
   background: url("../img/slide-ani.png") repeat-x;
   height: 218px;
   margin-bottom: 30px;
@@ -160,7 +160,7 @@ header .header-box .nav li button {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-#booklist .booklist-wrap .slide-box .second-slide {
+.slide-box .second-slide {
   background: url("../img/slide-ani1.png") repeat-x;
   height: 218px;
   margin-bottom: 30px;
@@ -169,7 +169,7 @@ header .header-box .nav li button {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-#booklist .booklist-wrap .slide-box .third-slide {
+.slide-box .third-slide {
   background: url("../img/slide-ani2.png") repeat-x;
   height: 218px;
   margin-bottom: 80px;
@@ -206,7 +206,7 @@ header .header-box .nav li button {
   height: auto;
   margin: 0 auto;
 }
-#video .video-box .video-img-box > iframe {
+#video .video-box .video-img-box iframe {
   display: none;
   border: none;
 }
@@ -615,7 +615,7 @@ header .header-box .nav li button {
   width: 417px;
   position: absolute;
   top: 250px;
-  left: 364px;
+  left: 360px;
 }
 #pick .pick-img-box img:nth-of-type(3) {
   width: 172px;
@@ -812,7 +812,7 @@ header .header-box .nav li button {
 
 #audiobook {
   width: 100%;
-  height: 1100px;
+  height: 990px;
   margin: 0 auto;
 }
 #audiobook .audiobook-list {
@@ -838,8 +838,8 @@ header .header-box .nav li button {
 }
 #audiobook .audiobook-wrap .audiobook-main-wrap {
   width: 100%;
-  height: 993px;
-  padding-top: 80px;
+  height: 885px;
+  padding-top: 45px;
   background-color: #f7f7f7;
 }
 #audiobook .audiobook-wrap .audiobook-main-wrap .audiobook-main {
@@ -877,7 +877,7 @@ header .header-box .nav li button {
 #audiobook .audiobook-wrap .audiobook-main-wrap .audiobook-main .audio-main-first-wrap .audiobook-phone > img {
   width: 330px;
   position: relative;
-  z-index: 50;
+  z-index: 100;
   pointer-events: none;
 }
 #audiobook .audiobook-wrap .audiobook-main-wrap .audiobook-main .audio-main-first-wrap .audiobook-phone .swiper {
@@ -978,6 +978,31 @@ header .header-box .nav li button {
 #audiobook .viewer-wrap .viewer-main-sec .sec-box1 > p {
   font-size: 22px;
 }
+#audiobook .viewer-wrap .viewer-main-sec .swiper-button {
+  margin: -70px 0 0 368px;
+}
+#audiobook .viewer-wrap .viewer-main-sec .swiper-pagination-bullet {
+  width: 50px;
+  height: 27px;
+  text-align: center;
+  line-height: 27px;
+  font-size: 15px;
+  color: #000;
+  opacity: 1;
+  border-radius: 40px;
+  background: transparent;
+  border: 1px solid #333;
+  position: absolute;
+}
+#audiobook .viewer-wrap .viewer-main-sec .swiper-pagination-bullets {
+  left: -33px !important;
+  width: 25% !important;
+  height: 60px;
+}
+#audiobook .viewer-wrap .viewer-main-sec .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #333;
+}
 
 #review {
   width: 100%;
@@ -987,130 +1012,18 @@ header .header-box .nav li button {
 #review .review-wrap {
   width: 1159px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
 }
 #review .review-wrap .review-img-box {
-  width: 400px;
-  height: 400px;
   position: relative;
-  top: -50px;
 }
 #review .review-wrap .review-img-box img:nth-of-type(1) {
-  width: 100%;
-  height: 100%;
-  box-shadow: 2px -3px 15px #ccc;
-}
-#review .review-wrap .review-img-box > iframe {
-  display: none;
+  position: absolute;
+  top: -100px;
 }
 #review .review-wrap .review-img-box .playbtn1 {
   width: 60px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 35%;
+  left: 21%;
   cursor: pointer;
-}
-#review .review-wrap .review-main h2 {
-  font-size: 49px;
-  padding: 80px 0 30px 0;
-}
-#review .review-wrap .review-main p {
-  font-size: 22px;
-  line-height: 30px;
-}
-
-#question {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  background-color: #ffeb60;
-  padding-bottom: 50px;
-}
-#question .qna-wrap {
-  width: 1159px;
-  margin: 0 auto;
-}
-#question .qna-wrap .qna-list {
-  width: 920px;
-  margin: 0 auto;
-}
-#question .qna-wrap .qna-list li {
-  max-height: 300px;
-  margin-bottom: 20px;
-  padding: 0 30px;
-  display: block;
-  background-color: #fff;
-  border-radius: 20px;
-  text-align: left;
-  position: relative;
-  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
-}
-#question .qna-wrap .qna-list li .question {
-  padding: 20px 0;
-}
-#question .qna-wrap .qna-list li .question p {
-  font-size: 20px;
-  font-weight: bold;
-}
-#question .qna-wrap .qna-list li .openbtn {
-  font-size: 24px;
-  position: absolute;
-  top: 20px;
-  right: 29px;
-  cursor: pointer;
-}
-#question .qna-wrap .qna-list li .openbtn-rotate {
-  transform: rotate(180deg);
-}
-#question .qna-wrap .qna-list li .answer {
-  border-top: 1px solid #333;
-}
-#question .qna-wrap .qna-list li .answer p {
-  line-height: 24px;
-  color: #555;
-  padding: 20px 0;
-}
-#question .qna-wrap .qna-list li .answer:not(:first-child) {
-  display: none;
-}
-
-#fixbtn {
-  width: 450px;
-  height: 56px;
-  margin: 0 auto;
-  padding: 16px 0;
-  background-color: #333;
-  color: #fff;
-  font-size: 16px;
-  border: none;
-  border-radius: 40px;
-  position: fixed;
-  display: none;
-  z-index: 100;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-footer {
-  width: 100%;
-}
-footer .footer-wrap {
-  width: 1159px;
-  margin: 0 auto;
-}
-footer .footer-wrap .first-footer .sns {
-  display: flex;
-  justify-content: space-between;
-}
-footer .footer-wrap .first-footer .sns .youtube a {
-  display: block;
-  background-image: url("../img/youtube.png");
-  width: 100px;
-  height: 100px;
 }

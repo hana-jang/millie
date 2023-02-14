@@ -11,6 +11,8 @@
     <!-- swiper cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/0c99aebf9b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -35,6 +37,7 @@
             </div>
         </div>
         <div id="booklist">
+            <div class="booklist-wrap">
                 <h2>당신을 기다리는<br>12만권의 도서</h2>
                 <p>첫 달 무료 구독을 통해<br>어떤 도서가 있는지 확인해보세요</p>
                 <div class="slide-box">
@@ -42,6 +45,7 @@
                     <div class="second-slide"></div>
                     <div class="third-slide"></div>
                 </div>
+            </div>
         </div>
         <div id="video">
             <div class="video-box">
@@ -49,7 +53,8 @@
                 <p>휴남동 서점의 따뜻한 이야기를<br>일상에서 더 가깝게</p>
                 <div class="video-img-box">
                     <img src="img/video-thum.jpg" alt="video-thum">
-                    <iframe src="" frameborder="0" width="100%" height="100%"  autoplay></iframe>
+                    <iframe src="https://www.youtube.com/embed/u1OVbU4EdwI?autoplay=1&mute=1" frameborder="0" width="100%" height="100%"
+                    autoplay></iframe>
                     <img src="img/playbtn.png" alt="playbtn" class="playbtn">
                 </div>
             </div>
@@ -537,13 +542,11 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="swiper-pagination1 swiper-button"></div>
+                        <div class="swiper-pagination1 swiper-button" style="margin:-68px 0 0 -4px"></div>
                     </div>
                 </div>
             </div>
         </div>
-        
-
         <!-- Initialize Swiper -->
         <script>
           var swiper = new Swiper(".mySwiper", {
@@ -587,15 +590,116 @@
         <div id="review">
             <div class="review-wrap">
                 <div class="review-img-box">
-                    <img src="img/video-thum1.jpg" alt="video-thum">
-                    <iframe width="415px" height="415px" src="" frameborder="0" autoplay></iframe>
+                    <img src="img/video-thum1.png" alt="video-thum">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/c-XG8k_w1LM?autoplay=1&mute=1" frameborder="0" autoplay playsinline></iframe>
                     <img src="img/playbtn.png" alt="playbtn" class="playbtn1">
+                </div>
+                <div class="review-main">
+                    <h2>내돈내산<br>밀리 구독 이야기</h2>
+                    <p>패션 브랜드 대표부터<br>
+                        고등학교 교사까지!</p>
                 </div>
             </div>
         </div>
-        <div class="question"></div>
-        <div class="fixbtn"></div>
+        <div id="question">
+            <div class="qna-wrap">
+                <h2>자주 묻는 질문</h2>
+                <ul class="qna-list">
+                    <li>
+                        <div class="question">
+                            <p>안 쓰면 정말 환불해 주나요?</p>
+                            <i class="fa-solid fa-angle-up openbtn"></i>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                물론입니다. 결제 후 콘텐츠 다운로드 및 열람을 하지 않으셨다고 전액 환불해 드리고 있어요.<br>
+                                <b>[밀리 > 관리 > 구독관리 > 결제 내역 확인]</b>
+                                에서 직접 환불이 가능하며,<br>
+                                해결이 어려운 경우 고객센터로 문의해 주세요.
+                            </p>
+                        </div>
+                        </li>
+                    <li>
+                        <div class="question">
+                            <p>구독 중 해지 할 수 있나요?  수수료는 없나요?</p>
+                            <i class="fa-solid fa-angle-up openbtn"></i>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                다음달 부터 결제되지 않도록 수수료 없이 언제든지 해지하실 수 있습니다.<br>
+                                <b>[밀리 > 관리 > 구독관리 > 결제 내역 확인]</b> 메뉴를 통해 기간에 상관없이 직접 가능해요.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="question">
+                            <p>무료 혜택은 누구나 받을 수 있나요?</p>
+                            <i class="fa-solid fa-angle-up openbtn"></i>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                네, 밀리 회원이라면 누구나 첫 정기구독 신청 시 1회 제공됩니다.<br>
+                                첫 달 무료 또는 첫 주 무료 중 선택이 가능하며 무료 기간에 따라 가격이 달라집니다.<br>
+                                종이책+전자책 정기구독의 경우 첫 주 무료 혜택만 제공됩니다.<br>
+                                아직 신청하지 않으셨다면 바로 구독신청으로 혜택을 받아 보세요.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="question">
+                            <p>어떤 기기에서 사용할 수 있나요?</p>
+                            <i class="fa-solid fa-angle-up openbtn"></i>
+                        </div>
+                        <div class="answer">
+                            <p>
+                                아래 기기와 버전에서 밀리를 사용할 수 있습니다.<br><br>
+                                - 휴대폰 / 태블릿 : IOS13, Android 6 이상 지원<br>
+                                - PC : Mac Yosemite, Window 10 이상 지원<br>
+                                - E ink : Android 4.4 이상 지원<br>
+                                (크레마 그랑데, 크레마 카르타G, 이노스페이스원 공식 판매 기기, 교보 Sam 7.8등)
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button id="fixbtn">
+            <span>
+                <b>첫 달 무료</b>로 독서 시작하기
+            </span>
+        </button>
     </div>
-    <footer></footer>
+    <footer>
+        <div class="footer-wrap">
+            <div class="first-footer">
+                <h1>(주) 밀리의 서재</h1>
+                <ul class="sns">
+                    <li class="youtube">
+                        <a href="https://www.youtube.com/channel/UC6bk8AaEXA1hBnGXcLyj1QQ"></a>
+                    </li>
+                    <li class="instagram">
+                        <a href="https://www.instagram.com/millie_bookclub"></a>
+                    </li>
+                    <li class="facebook">
+                        <a href="https://www.facebook.com/millie.co.kr/"></a>
+                    </li>
+                    <li class="kakao">
+                        <a href="https://pf.kakao.com/_MhGhC"></a>
+                    </li>
+                    <li class="naver">
+                        <a href="https://post.naver.com/millietown"></a>
+                    </li>
+                </ul>
+            </div>
+            <ul>
+                <li>
+                    
+                </li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
