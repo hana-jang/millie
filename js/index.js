@@ -75,7 +75,7 @@ $(function(){
 
     $(window).scroll(function(){
         var scroll=$(window).scrollTop();
-        console.log(scroll);
+        // console.log(scroll);
     
         if(0<scroll<200){
             $(".booklist-wrap h2").css({"transform":"translateY(50px)","opacity":"0"});
@@ -197,7 +197,7 @@ $(function(){
             $(".pick-img-box img").eq(3).css("transform","scale(0.3)");
             $(".pick-img-box img").eq(5).css("transform","scale(0.3)");
         }
-        
+
         // logo 이미지 변경하기
         if(scroll<799){
             $(".logo img").attr("src","img/logo.png");
