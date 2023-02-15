@@ -137,22 +137,9 @@ $(function(){
             $("#pick h2").css({"transform":"translateY(0px)","opacity":"1"});
             $("#pick p").css({"transform":"translateY(0px)","opacity":"1"});
         }
-        if(scroll<5100){ // 완독지수(#pick) 그림 scale
-            $(".pick-img-box img").eq(2).css("transform","scale(0.3)");
-            $(".pick-img-box img").eq(4).css("transform","scale(0.3)");
-            $(".pick-img-box img").eq(3).css("transform","scale(0.3)");
-            $(".pick-img-box img").eq(5).css("transform","scale(0.3)");
-        }
         if(scroll>5200){
             $("#second-call-book h2").css({"transform":"translateY(50px)","opacity":"0"});
             $("#second-call-book p").css({"transform":"translateY(50px)","opacity":"0"});
-            // 완독지수(#pick) 그림 scale
-            $(".pick-img-box img").eq(2).css("transform","scale(1)");
-            $(".pick-img-box img").eq(4).css("transform","scale(1)");
-        }
-        if(scroll>5300){ // 완독지수(#pick) 그림 scale
-            $(".pick-img-box img").eq(3).css("transform","scale(1)");
-            $(".pick-img-box img").eq(5).css("transform","scale(1)");
         }
         if(scroll>5500){
             $("#price h2").css({"transform":"translateY(50px)","opacity":"0"});
@@ -171,12 +158,6 @@ $(function(){
             $(".audio-main-first>p").css({"transform":"translateY(50px)","opacity":"0"});
             $(".audiobook-phone").css({"transform":"translateY(50px)","opacity":"0"});
         }
-        if(scroll>6400){ // 완독지수(#pick) 그림 scale
-            $(".pick-img-box img").eq(2).css("transform","scale(0.3)");
-            $(".pick-img-box img").eq(4).css("transform","scale(0.3)");
-            $(".pick-img-box img").eq(3).css("transform","scale(0.3)");
-            $(".pick-img-box img").eq(5).css("transform","scale(0.3)");
-        }
         if(scroll>6800){
             $("#price h2").css({"transform":"translateY(50px)","opacity":"0"});
             $("#price>p").css({"transform":"translateY(50px)","opacity":"0"});
@@ -193,6 +174,30 @@ $(function(){
             $(".audio-main-first>p").css({"transform":"translateY(50px)","opacity":"0"});
             $(".audiobook-phone").css({"transform":"translateY(50px)","opacity":"0"});
         }
+
+        // 완독지수(#pick) 그림 scale
+        if(scroll<5100){ // 완독지수(#pick) 그림 scale 0.3으로 돌리기
+            $(".pick-img-box img").eq(2).css("transform","scale(0.3)");
+            $(".pick-img-box img").eq(4).css("transform","scale(0.3)");
+            $(".pick-img-box img").eq(3).css("transform","scale(0.3)");
+            $(".pick-img-box img").eq(5).css("transform","scale(0.3)");
+        }
+        if (scroll > 5100) {
+            $(".pick-img-box img").eq(2).css("transform", "scale(1)");
+            $(".pick-img-box img").eq(4).css("transform", "scale(1)");
+        }
+        if(scroll>5300){
+            $(".pick-img-box img").eq(3).css("transform","scale(1)");
+            $(".pick-img-box img").eq(5).css("transform","scale(1)");
+        }
+
+        if(scroll>6400){ // 완독지수(#pick) 그림 scale 0.3으로 돌리기
+            $(".pick-img-box img").eq(2).css("transform","scale(0.3)");
+            $(".pick-img-box img").eq(4).css("transform","scale(0.3)");
+            $(".pick-img-box img").eq(3).css("transform","scale(0.3)");
+            $(".pick-img-box img").eq(5).css("transform","scale(0.3)");
+        }
+        
         // logo 이미지 변경하기
         if(scroll<799){
             $(".logo img").attr("src","img/logo.png");
