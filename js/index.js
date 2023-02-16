@@ -158,7 +158,7 @@ $(function(){
             $(".audio-main-first>p").css({"transform":"translateY(50px)","opacity":"0"});
             $(".audiobook-phone").css({"transform":"translateY(50px)","opacity":"0"});
         }
-        if(scroll>6800){
+        if(scroll>6730){
             $("#price h2").css({"transform":"translateY(50px)","opacity":"0"});
             $("#price>p").css({"transform":"translateY(50px)","opacity":"0"});
             $(".audio-main-first>h2").css({"transform":"translateY(0px)","opacity":"1"});

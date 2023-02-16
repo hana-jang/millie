@@ -74,6 +74,114 @@ header .header-box .nav li button {
   cursor: pointer;
 }
 
+footer {
+  width: 100%;
+}
+footer .footer-wrap {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 40px;
+}
+footer .footer-wrap .first-footer {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-wrap .first-footer h4 {
+  line-height: 30px;
+}
+footer .footer-wrap .first-footer .sns {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-wrap .first-footer .sns li a {
+  margin: 0 5px;
+}
+footer .footer-wrap .first-footer .sns .youtube a {
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: url("../img/youtube.png") 50% 50%/contain no-repeat;
+}
+footer .footer-wrap .first-footer .sns .instagram a {
+  width: 24px;
+  height: 24px;
+  background: url("../img/insta.png") 50% 50%/contain no-repeat;
+  display: block;
+}
+footer .footer-wrap .first-footer .sns .facebook a {
+  width: 24px;
+  height: 24px;
+  background: url("../img/facebook.png") 50% 50%/contain no-repeat;
+  display: block;
+}
+footer .footer-wrap .first-footer .sns .kakao a {
+  width: 24px;
+  height: 24px;
+  background: url("../img/kakao.png") 50% 50%/contain no-repeat;
+  display: block;
+}
+footer .footer-wrap .first-footer .sns .naver a {
+  width: 24px;
+  height: 24px;
+  background: url("../img/naver.png") 50% 50%/contain no-repeat;
+  display: block;
+}
+footer .footer-wrap .sec-footer .imformation {
+  margin-bottom: 20px;
+  display: flex;
+}
+footer .footer-wrap .sec-footer .imformation p {
+  color: #a5a5a5;
+  font-size: 11px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+footer .footer-wrap .sec-footer .imformation .openbtn1 {
+  height: 15px;
+  font-weight: bold;
+  color: #a5a5a5;
+  font-size: 11px;
+  line-height: 16px;
+  cursor: pointer;
+}
+footer .footer-wrap .sec-footer .imformation .openbtn-rotate {
+  transform: rotate(180deg);
+}
+footer .footer-wrap .sec-footer .imfor-list {
+  display: none;
+}
+footer .footer-wrap .sec-footer .imfor-list ul {
+  display: flex;
+}
+footer .footer-wrap .sec-footer .imfor-list ul li {
+  margin-right: 20px;
+  color: #a5a5a5;
+  font-size: 11px;
+}
+footer .footer-wrap .sec-footer .list1 {
+  margin-bottom: 20px;
+}
+footer .footer-wrap .sec-footer .list2 {
+  margin-bottom: 30px;
+}
+footer .footer-wrap .third-footer {
+  margin-bottom: 20px;
+}
+footer .footer-wrap .third-footer ul {
+  display: flex;
+  margin-bottom: 20px;
+}
+footer .footer-wrap .third-footer ul li {
+  margin-right: 20px;
+  font-size: 12px;
+  color: #6f6f6f;
+}
+footer .footer-wrap .third-footer p {
+  font-size: 11px;
+  color: #6f6f6f;
+}
+
 #main {
   padding-top: 65px;
 }
@@ -310,13 +418,13 @@ header .header-box .nav li button {
   width: 45px;
   position: absolute;
   top: 0;
-  right: 0px;
+  right: -2px;
 }
 #first-call-book .first-call-book-wrap .best-all-box .best-book-wrap .best-box:nth-of-type(3) .best-box-icon1 {
   width: 45px;
   position: absolute;
   top: 30px;
-  right: 0px;
+  right: -2px;
 }
 #first-call-book .first-call-book-wrap .best-all-box .best-book-wrap .best-box:nth-of-type(6) {
   position: relative;
@@ -383,6 +491,7 @@ header .header-box .nav li button {
 #first-call-book .first-call-book-wrap .audio-all-box .audio-book-wrap .audio-box {
   width: 100%;
   height: 330px;
+  position: relative;
 }
 #first-call-book .first-call-book-wrap .audio-all-box .audio-book-wrap .audio-box a img {
   width: 155px;
@@ -400,6 +509,18 @@ header .header-box .nav li button {
   text-align: left;
   color: #888888;
   font-family: "SUIT-Regular";
+}
+#first-call-book .first-call-book-wrap .audio-all-box .audio-book-wrap .audio-box .audio-box-icon {
+  width: 45px;
+  position: absolute;
+  top: 0;
+  right: -2px;
+}
+#first-call-book .first-call-book-wrap .audio-all-box .audio-book-wrap .audio-box .audio-box-icon1 {
+  width: 45px;
+  position: absolute;
+  top: 30px;
+  right: -2px;
 }
 #first-call-book .first-call-book-wrap .romance-all-box {
   width: 1159px;
@@ -1182,112 +1303,4 @@ header .header-box .nav li button {
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-footer {
-  width: 100%;
-}
-footer .footer-wrap {
-  width: 1440px;
-  margin: 0 auto;
-  padding: 40px;
-}
-footer .footer-wrap .first-footer {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-footer .footer-wrap .first-footer h4 {
-  line-height: 30px;
-}
-footer .footer-wrap .first-footer .sns {
-  display: flex;
-  justify-content: space-between;
-}
-footer .footer-wrap .first-footer .sns li a {
-  margin: 0 5px;
-}
-footer .footer-wrap .first-footer .sns .youtube a {
-  width: 24px;
-  height: 24px;
-  display: block;
-  background: url("../img/youtube.png") 50% 50%/contain no-repeat;
-}
-footer .footer-wrap .first-footer .sns .instagram a {
-  width: 24px;
-  height: 24px;
-  background: url("../img/insta.png") 50% 50%/contain no-repeat;
-  display: block;
-}
-footer .footer-wrap .first-footer .sns .facebook a {
-  width: 24px;
-  height: 24px;
-  background: url("../img/facebook.png") 50% 50%/contain no-repeat;
-  display: block;
-}
-footer .footer-wrap .first-footer .sns .kakao a {
-  width: 24px;
-  height: 24px;
-  background: url("../img/kakao.png") 50% 50%/contain no-repeat;
-  display: block;
-}
-footer .footer-wrap .first-footer .sns .naver a {
-  width: 24px;
-  height: 24px;
-  background: url("../img/naver.png") 50% 50%/contain no-repeat;
-  display: block;
-}
-footer .footer-wrap .sec-footer .imformation {
-  margin-bottom: 20px;
-  display: flex;
-}
-footer .footer-wrap .sec-footer .imformation p {
-  color: #a5a5a5;
-  font-size: 11px;
-  margin-right: 5px;
-  cursor: pointer;
-}
-footer .footer-wrap .sec-footer .imformation .openbtn1 {
-  height: 15px;
-  font-weight: bold;
-  color: #a5a5a5;
-  font-size: 11px;
-  line-height: 16px;
-  cursor: pointer;
-}
-footer .footer-wrap .sec-footer .imformation .openbtn-rotate {
-  transform: rotate(180deg);
-}
-footer .footer-wrap .sec-footer .imfor-list {
-  display: none;
-}
-footer .footer-wrap .sec-footer .imfor-list ul {
-  display: flex;
-}
-footer .footer-wrap .sec-footer .imfor-list ul li {
-  margin-right: 20px;
-  color: #a5a5a5;
-  font-size: 11px;
-}
-footer .footer-wrap .sec-footer .list1 {
-  margin-bottom: 20px;
-}
-footer .footer-wrap .sec-footer .list2 {
-  margin-bottom: 30px;
-}
-footer .footer-wrap .third-footer {
-  margin-bottom: 20px;
-}
-footer .footer-wrap .third-footer ul {
-  display: flex;
-  margin-bottom: 20px;
-}
-footer .footer-wrap .third-footer ul li {
-  margin-right: 20px;
-  font-size: 12px;
-  color: #6f6f6f;
-}
-footer .footer-wrap .third-footer p {
-  font-size: 11px;
-  color: #6f6f6f;
 }

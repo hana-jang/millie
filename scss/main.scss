@@ -1,83 +1,7 @@
 @charset "utf-8";
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'SpoqaHanSansNeo-Regular';
-}
+@import "common";
 
-ul,ol,li{
-    list-style:none;
-}
-
-a{
-    text-decoration: none;
-    color:#333;
-}
-
-h1,h2,h3,h4,h5,h6{
-    font-family: 'LINESeedKR-Bd';
-    font-weight: 700;
-}
-
-h2{
-    font-size:48px;
-    padding:70px 0 30px 0;
-}
-
-@font-face {
-    font-family: 'LINESeedKR-Bd';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SpoqaHanSansNeo-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-header{
-    width:100%;
-    position:fixed;
-    background-color:rgb(255,255,255,0.8);
-    z-index:30;
-    .header-box{
-        height:64px;
-        padding:0 20px;
-        display:flex;
-        justify-content: space-between;
-        border-bottom:1px solid #ccc;
-        .logo{
-            margin:20px 0;
-            img{
-                max-width:56px;
-            }
-        }
-        .nav {
-            display: flex;
-            align-items: center;
-            li {
-                padding: 20px;
-                font-size: 16px;
-                cursor: pointer;
-        
-                button {
-                    padding: 7px 25px;
-                    border: none;
-                    background-color: #333;
-                    color: #fff;
-                    border-radius: 40px;
-                    font-size: 13px;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-}
 
 @mixin center{
     $center:50%;
@@ -354,14 +278,14 @@ header{
                         width: 45px;
                         position: absolute;
                         top: 0;
-                        right: 0px;
+                        right: -2px;
                     }
 
                     .best-box-icon1 {
                         width: 45px;
                         position: absolute;
                         top: 30px;
-                        right: 0px;
+                        right: -2px;
                     }
                 }
 
@@ -435,6 +359,8 @@ header{
                 .audio-box {
                     width: 100%;
                     height: 330px;
+                    position:relative;
+
                     a {
                         img {
                             width: 155px;
@@ -454,6 +380,19 @@ header{
                         text-align: left;
                         color:#888888;
                         font-family: 'SUIT-Regular';
+                    }
+                    .audio-box-icon {
+                        width: 45px;
+                        position: absolute;
+                        top: 0;
+                        right: -2px;
+                    }
+
+                    .audio-box-icon1 {
+                        width: 45px;
+                        position: absolute;
+                        top: 30px;
+                        right: -2px;
                     }
                 }
             }
@@ -1210,113 +1149,4 @@ header{
     transform:translateX(-50%);
 }
 
-footer{
-    width:100%;
-    .footer-wrap{
-        width:1440px;
-        margin:0 auto;
-        padding:40px;
-        .first-footer{
-            margin-bottom:20px;
-            h4{
-                line-height: 30px;
-            }
-            display:flex;
-            justify-content: space-between;
-            .sns{
-                display:flex;
-                justify-content: space-between;
-                li a{
-                    margin:0 5px;
-                }
-                .youtube a{
-                    width:24px;
-                    height:24px;
-                    display:block;
-                    background: url("../img/youtube.png") 50% 50% / contain no-repeat;
-                }
-                .instagram a{
-                    width:24px;
-                    height:24px;
-                    background:url("../img/insta.png") 50% 50% / contain no-repeat;
-                    display:block;
-                }
-                .facebook a{
-                    width:24px;
-                    height:24px;
-                    background:url("../img/facebook.png") 50% 50% / contain no-repeat;
-                    display:block;
-                }
-                .kakao a{
-                    width:24px;
-                    height:24px;
-                    background:url("../img/kakao.png") 50% 50% / contain no-repeat;
-                    display:block;
-                }
-                .naver a{
-                    width:24px;
-                    height:24px;
-                    background:url("../img/naver.png") 50% 50% / contain no-repeat;
-                    display:block;
-                }
-            }
-        }
-        .sec-footer{
-            .imformation{
-                margin-bottom:20px;
-                display:flex;
-                p{
-                    color:#a5a5a5;
-                    font-size:11px;
-                    margin-right:5px;
-                    cursor: pointer;
-                }
-                .openbtn1{
-                    height:15px;
-                    font-weight: bold;
-                    color:#a5a5a5;
-                    font-size:11px;
-                    line-height: 16px;
-                    cursor: pointer;
-                }
-                .openbtn-rotate{
-                    transform:rotate(180deg);
-                }
-            }
-            .imfor-list{
-                display:none;
-                ul{
-                    display:flex;
-                    li{
-                        margin-right:20px;
-                        color:#a5a5a5;
-                        font-size:11px;
-                    };
-                }
-            }
-            .list1{
-                margin-bottom:20px;
-            }
-            .list2{
-                margin-bottom:30px;
-            }
-        }
-        .third-footer{
-            margin-bottom:20px;
-            ul{
-                display:flex;
-                margin-bottom:20px;
-                li{
-                    margin-right:20px;
-                    font-size:12px;
-                    color:#6f6f6f;
-                }
-            }
-            p{
-                font-size:11px;
-                color:#6f6f6f;
-            }
-        }
-    }
-}
 
