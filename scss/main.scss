@@ -5,19 +5,13 @@
 
 @mixin center{
     $center:50%;
+    $center1:-50%;
     position:absolute;
     top:$center;
     left:$center;
-    transform:translate(-$center, -$center);
+    transform:translate($center1, $center1);
 }
-@mixin transform($left){
-    $center:50%;
-    position:absolute;
-    top:$center;
-    left:$center;
-    transform:translate(-$left,-$center);
-}
-@mixin transform1($x, $y){
+@mixin transform($x, $y){
     $center:50%;
     position:absolute;
     top:$center;
@@ -68,7 +62,7 @@
 
         >img{
             width: 760px;
-            @include transform1(-23%, -52%);
+            @include transform(-23%, -52%);
         }
 
         .slider-box-1 {
@@ -248,12 +242,10 @@
                     width: 100%;
                     height: 330px;
 
-                    a {
-                        img {
-                            width: 155px;
-                            border-top-right-radius: 5px;
-                            border-bottom-right-radius: 5px;
-                        }
+                    img {
+                        width: 155px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
                     }
 
                     h4 {
@@ -322,12 +314,10 @@
                 .new-box {
                     width: 100%;
                     height: 330px;
-                    a {
-                        img {
-                            width: 155px;
-                            border-top-right-radius: 5px;
-                            border-bottom-right-radius: 5px;
-                        }
+                    img {
+                        width: 155px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
                     }
                     h4 {
                         width: 145px;
@@ -361,12 +351,10 @@
                     height: 330px;
                     position:relative;
 
-                    a {
-                        img {
-                            width: 155px;
-                            border-top-right-radius: 5px;
-                            border-bottom-right-radius: 5px;
-                        }
+                    img {
+                        width: 155px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
                     }
                     h4 {
                         width: 145px;
@@ -411,13 +399,13 @@
                 .romance-box {
                     width: 100%;
                     height: 330px;
-                    a {
-                        img {
-                            width: 155px;
-                            border-top-right-radius: 5px;
-                            border-bottom-right-radius: 5px;
-                        }
+
+                    img {
+                        width: 155px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
                     }
+
                     h4 {
                         width: 145px;
                         // height:40px;
@@ -440,13 +428,10 @@
 @mixin box{
     width: 100%;
     height: 330px;
-
-    a {
-        img {
-            width: 155px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-        }
+    img {
+        width: 155px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 
     h4 {
@@ -665,14 +650,14 @@
             background-color: #fff;
             border-radius: 16px;
             box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
-            padding:40px 35px;
+            padding:35px;
             text-align: left;
             >p:nth-child(1){
                 font-size:23px;
                 font-weight:bold;
             }
             div:nth-of-type(1){
-                margin-top:20px;
+                margin-top:15px;
                 p{
                     font-size:40px;
                     font-weight: bold;
@@ -724,14 +709,14 @@
             background-color: #fff;
             border-radius: 16px;
             box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
-            padding:40px 35px;
+            padding:35px;
             text-align: left;
             >p:nth-child(1){
                 font-size:23px;
                 font-weight:bold;
             }
             div:nth-of-type(1){
-                margin-top:20px;
+                margin-top:15px;
                 p{
                     font-size:40px;
                     font-weight: bold;
@@ -828,12 +813,15 @@
             li {
                 width: 50%;
                 padding: 30px;
+                cursor: pointer;
             }
-
-            img {
-                width: 24px;
-                height: 24px;
+            a{
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
             }
+            
         }
 
         .audiobook-list-click {
@@ -1099,6 +1087,7 @@
                 box-shadow: 10px 10px 40px rgb(0 0 0 / 10%);
                 .question {
                     padding: 20px 0;
+                    cursor: pointer;
                     p{
                         font-size: 20px;
                         font-weight: bold;
@@ -1147,6 +1136,7 @@
     bottom:16px;
     left:50%;
     transform:translateX(-50%);
+    cursor: pointer;
 }
 
 

@@ -129,7 +129,7 @@
 
                 for (var i = 0; i < 3; i++) {
                     // 3개밖에 없어서 굳이 box.length로 할 필요 없음
-                    $(".best-box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                    $(".best-box").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'>");
                     $(".best-box").eq(i).append("<h4>"  + msg.documents[i].title + "</h4>");
                     $(".best-box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     $(".best-box").eq(2).append("<img src='img/audio-icon.png' class='best-box-icon'>");
@@ -143,7 +143,7 @@
             headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
         })
             .done(function (msg) {
-                    $(".best-box").eq(3).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
+                    $(".best-box").eq(3).append("<img src='" + msg.documents[0].thumbnail + "'>");
                     $(".best-box").eq(3).append("<h4>"  + msg.documents[0].title + "</h4>");
                     $(".best-box").eq(3).append("<h5>" + msg.documents[0].authors + "</h5>");
             });
@@ -154,7 +154,7 @@
             headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
         })
             .done(function (msg) {
-                    $(".best-box").eq(4).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
+                    $(".best-box").eq(4).append("<img src='" + msg.documents[0].thumbnail + "'>");
                     $(".best-box").eq(4).append("<h4>"  + msg.documents[0].title + "</h4>");
                     $(".best-box").eq(4).append("<h5>" + msg.documents[0].authors + "</h5>");
             });
@@ -167,7 +167,7 @@
             .done(function (msg) {
                 var str=msg.documents[0].title;
                 var str2=str.substring(0,16);
-                    $(".best-box").eq(5).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
+                    $(".best-box").eq(5).append("<img src='" + msg.documents[0].thumbnail + "'>");
                     $(".best-box").eq(5).append("<h4>"  + str2+ "</h4>");
                     $(".best-box").eq(5).append("<h5>" + msg.documents[0].authors + "</h5>");
                     $(".best-box").eq(5).append("<img src='img/audio-icon.png' class='best-box-icon'>");
@@ -180,7 +180,7 @@
             headers: { Authorization: "KakaoAK ceda120f981fd447959e3c1bf485097d" }
         })
             .done(function (msg) {
-                    $(".best-box").eq(6).append("<a href='#none'>" + "<img src='" + msg.documents[0].thumbnail + "'>" + "</a>");
+                    $(".best-box").eq(6).append("<img src='" + msg.documents[0].thumbnail + "'>");
                     $(".best-box").eq(6).append("<h4>"  + msg.documents[0].title + "</h4>");
                     $(".best-box").eq(6).append("<h5>" + msg.documents[0].authors + "</h5>");
             });
@@ -196,7 +196,7 @@
                     var box1 = document.getElementsByClassName('new-box');
 
                     for (var i = 0; i < box1.length; i++) {
-                        $(".new-box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".new-box").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'>");
                         $(".new-box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
                         $(".new-box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     }
@@ -213,7 +213,7 @@
                     var box2 = document.getElementsByClassName('audio-box');
 
                     for (var i = 0; i < box2.length; i++) {
-                        $(".audio-box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".audio-box").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'>");
                         $(".audio-box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
                         $(".audio-box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                         $(".audio-box").eq(i).append("<img src='img/audio-icon.png' class='audio-box-icon'>");
@@ -232,7 +232,7 @@
                     var box3 = document.getElementsByClassName('romance-box');
 
                     for (var i = 0; i < box3.length; i++) {
-                        $(".romance-box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".romance-box").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'>");
                         $(".romance-box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
                         $(".romance-box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     }
@@ -317,7 +317,7 @@
             })
                 .done(function (msg) {
                     for (var i = 0; i < 7; i++) {
-                        $(".money-book-wrap>.box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".money-book-wrap>.box").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'>");
                         $(".money-book-wrap>.box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
                         $(".money-book-wrap>.box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     }
@@ -332,7 +332,7 @@
             })
                 .done(function (msg) {
                     for (var i = 0; i <7; i++) {
-                        $(".english-book-wrap>.box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".english-book-wrap>.box").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'>");
                         $(".english-book-wrap>.box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
                         $(".english-book-wrap>.box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     }
@@ -347,7 +347,7 @@
             })
                 .done(function (msg) {
                     for (var i = 0; i < 7; i++) {
-                        $(".higasino-book-wrap>.box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".higasino-book-wrap>.box").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'>");
                         $(".higasino-book-wrap>.box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
                         $(".higasino-book-wrap>.box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     }
@@ -362,7 +362,7 @@
             })
                 .done(function (msg) {
                     for (var i = 0; i < 7; i++) {
-                        $(".budongsan-book-wrap>.box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".budongsan-book-wrap>.box").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'>");
                         $(".budongsan-book-wrap>.box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
                         $(".budongsan-book-wrap>.box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     }
@@ -377,7 +377,7 @@
             })
                 .done(function (msg) {
                     for (var i = 0; i < 7 ; i++) {
-                        $(".exercise-book-wrap>.box").eq(i).append("<a href='#none'>" + "<img src='" + msg.documents[i].thumbnail + "'>" + "</a>");
+                        $(".exercise-book-wrap>.box").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'>");
                         $(".exercise-book-wrap>.box").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
                         $(".exercise-book-wrap>.box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     }
@@ -448,12 +448,16 @@
             <div class="audiobook-list">
                 <ul>
                     <li class="audiobook-list-click">
-                        <img src="img/headphone.png" alt="headphone"><br>
-                        오디오북
+                        <a href="#">
+                            <img src="img/headphone.png" alt="headphone"><br>
+                            오디오북
+                        </a>
                     </li>
                     <li>
-                        <img src="img/viewer.png" alt="viewer"><br>
+                        <a href="#">
+                            <img src="img/viewer.png" alt="viewer"><br>
                         밀리뷰어
+                        </a>
                     </li>
                 </ul>
             </div>
