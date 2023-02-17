@@ -25,6 +25,51 @@ $(function(){
     }
     $(".sec1-3-1 span").eq(1).html("<u>오늘(" +month+"/"+date+", "+day+")</u> 도착예정")
 
+    // 수량 버튼 누르면 숫자 변경
+    var input=document.getElementById("result");
+    var result=Number(input.value);
+
+    document.getElementById("minus").onclick=function(){
+        result--;
+        input.value=result;
+        console.log(result);
+        if(result<=0){
+            alert("최소 1권 이상부터 구매 가능합니다");
+            input.value=1;
+            result=1;
+        }
+    }
+
+    document.getElementById("plus").onclick=function(){
+        result++;
+        input.value=result;
+    }
+
+
+    // 많이 구매한 부분
+    
+    $(".manybuy-list ul li").click(function(){
+        var mb_num=$(this).index();
+
+        $(".with-buy ul").eq(mb_num).show();
+        $(".with-buy ul").eq(mb_num).show().css("display","flex");
+        $(".with-buy ul").eq(mb_num).siblings().hide();
+        $(this).addClass("mb-click");
+        $(this).siblings().removeClass("mb-click");
+    });
+
+
+    // 도서정보 탭 클릭 이벤트
+    $(".choice-nav-wrap ul:nth-of-type(1) li").click(function(){
+        $(this).children().addClass("cho-nav-font");
+        $(this).siblings().children().removeClass("cho-nav-font");
+        $(this).addClass("cho-nav-bg");
+        $(this).siblings().removeClass("cho-nav-bg");
+    });
+
+
+
+
     // footer
     var count = 0;
     $(".imformation p").click(function () {

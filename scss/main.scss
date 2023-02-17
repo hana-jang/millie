@@ -123,9 +123,6 @@
     margin: 0 auto;
     text-align: center;
 
-    p {
-        @include p_style;
-    }
     .booklist-wrap{
         margin:0 auto;
         padding:15px 24px 50px 24px;
@@ -133,6 +130,7 @@
             @include animate-ready();
         }
         p{
+            @include p_style;
             @include animate-ready1();
         }
         .slide-box{
@@ -162,7 +160,6 @@
             }
         }
     }
-    
 }
 
 #video{

@@ -251,11 +251,6 @@ footer .footer-wrap .third-footer p {
   margin: 0 auto;
   text-align: center;
 }
-#booklist p {
-  font-size: 22px;
-  line-height: 30px;
-  padding-bottom: 50px;
-}
 #booklist .booklist-wrap {
   margin: 0 auto;
   padding: 15px 24px 50px 24px;
@@ -266,6 +261,9 @@ footer .footer-wrap .third-footer p {
   opacity: 0;
 }
 #booklist .booklist-wrap p {
+  font-size: 22px;
+  line-height: 30px;
+  padding-bottom: 50px;
   transform: translateY(40px);
   transition: all 1.5s;
   opacity: 0;

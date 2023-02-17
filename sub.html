@@ -27,7 +27,7 @@
             </ul>
         </div>
     </header>
-    <div id="main">
+    <div id="All">
         <div id="map">
             <div class="map-wrap">
                 <ul>
@@ -145,18 +145,21 @@
                         <div class="sec2">
                             <div class="sec2-1">
                                 <p>판매중</p>
-                                <div>
-                                    수량
+                                <div class="count">
+                                    <span>수량</span>
+                                    <button id="minus">&#45;</button>
+                                    <input type="text" value="1" id="result">
+                                    <button id="plus">&#43;</button>
                                 </div>
                                 <button>카트에 넣기</button><br>
                                 <button>바로구매</button>
                             </div>
                             <div class="sec2-2">
-                                <p>
-                                    &#183; 해외배송가능<br>
-                                    &#183; 최저가보상<br>
-                                    &#183; 문화비소득공제 신청 가능
-                                </p>
+                                <ul>
+                                    <li>&#183; 해외배송가능</li>
+                                    <li>&#183; 최저가보상</li>
+                                    <li>&#183; 문화비소득공제 신청 가능</li>
+                                </ul>
                                 <button>리스트에 넣기</button><br>
                                 <button>시리즈 알림신청</button>
                             </div>
@@ -165,11 +168,208 @@
                 </div>
             </div>
         </div>
+        <div id="manybuy">
+            <div class="manybuy-wrap">
+                <div class="manybuy-list">
+                    <ul>
+                        <li class="mb-click">
+                            <a href="#none">이 책을 구입하신 분들이 <span>함께 산 책</span></a>
+                        </li>
+                        <li>
+                            <a href="#none">이 책을 구입하신 분들이 <span>많이 산 책</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="with-buy">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img1/withbuy.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>불편한 편의점 세트</p>
+                                <p>김호연 저 | 나무옆의자</p>
+                                <p><span>25,200원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img1/withbuy1.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>미드나잇 라이브러리 : 평행우주 에디션</p>
+                                <p>매트 헤이그 | 노진선 역…</p>
+                                <p><span>14,220원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img1/withbuy2.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>달러구트 꿈 백화점 1,2 세트</p>
+                                <p>이미예 저 | 팩토리나인</p>
+                                <p><span>24,840원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img1/withbuy3.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>어서 오세요, 휴남동 서점입니다</p>
+                                <p>황보름 저 | 클레이하…</p>
+                                <p><span>13,500원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img1/withbuy4.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>오늘 밤, 세계에서 사라진다 해도 세트</p>
+                                <p>이치조 미사키 저/권영…</p>
+                                <p><span>25,200원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img1/withbuy5.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>작별인사</p>
+                                <p>김영하 저 | 복복서가</p>
+                                <p><span>25,200원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img1/manybuy.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>불편한 편의점 세트</p>
+                                <p>김호연 저 | 나무옆의자</p>
+                                <p><span>25,200원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img1/manybuy1.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>아버지의 해방일지</p>
+                                <p>정지아 저 | 창비</p>
+                                <p><span>13,500원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img1/manybuy2.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>하얼빈</p>
+                                <p>김훈 저 | 문학동네</p>
+                                <p><span>14,400원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img1/manybuy3.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>만일 내가 인생을 다시 산다면(10만부 기념</p>
+                                <p>김혜남 저 | 메이븐</p>
+                                <p><span>15,480원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img1/manybuy4.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>파친코 세트</p>
+                                <p>이민진 저/신승미 역 | …</p>
+                                <p><span>28,440원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img1/manybuy5.jpg" alt="manybuy-book">
+                            </a>
+                            <div class="with_buy_text">
+                                <p>트렌드 코리아 2023</p>
+                                <p>김난도,전미영,최지혜…</p>
+                                <p><span>17,100원</span>(10% 할인)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="choice-nav">
+            <div class="choice-nav-wrap">
+                <ul>
+                    <li class="cho-nav-bg">
+                        <a href="#" class="cho-nav-font">도서정보</a>
+                    </li>
+                    <li>
+                        <a href="#">리뷰</a>
+                    </li>
+                    <li>
+                        <a href="#">배송/반품/교환</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>12,600원</li>
+                    <li><button>카트에 넣기</button></li>
+                    <li><button>바로구매</button></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="main-wrap">
+                <div class="main-left">
+                    <div id="series">
+                        <h3>이 상품의 시리즈 <span>(3개)</span></h3>
+                        <div class="seriesbox">
+                            <div class="seriesset">
+                                <a href="#">
+                                    <img src="img1/withbuy.jpg" alt="seriesset">
+                                </a>
+                                <div class="series-text">
+                                    <a href="#">불편한 편의점 세트</a>
+                                    <p><span>25,200원</span> (10% 할인)</p>
+                                </div>
+                            </div>
+                            <div class="series1">
+                                <a href="#">
+                                    <img src="img1/series1.jpg" alt="series1">
+                                </a>
+                                <div class="series-text">
+                                    <a href="#">불편한 편의점</a>
+                                    <p><span>12,600원</span> (10% 할인)</p>
+                                </div>
+                            </div>
+                            <div class="series2">
+                                <a href="#">
+                                    <img src="img1/series2.jpg" alt="series2">
+                                </a>
+                                <div class="series-text">
+                                    <a href="#">불편한 편의점2</a>
+                                    <p><span>12,600원</span> (10% 할인)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bookcard"></div>
+                </div>
+                <div class="main-right"></div>
+            </div>
+        </div>
+       
     </div>
-
-    <script>
-
-    </script>
     <footer>
         <div class="footer-wrap">
             <div class="first-footer">
