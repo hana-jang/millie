@@ -67,8 +67,35 @@ $(function(){
         $(this).siblings().removeClass("cho-nav-bg");
     });
 
+    $(".bookcard-wrap").hover(function(){
+        $(".prev").fadeIn();
+        $(".next").fadeIn();
+    }, function(){
+        $(".prev").fadeOut();
+        $(".next").fadeOut();
+    });
 
+    $(".prev").click(function(){
+        $(".bookcard-list li:last").prependTo(".bookcard-list");
+        // $(".bookcard-list").css("margin-left","calc(30px - 50%)");
+        $(".bookcard-list").css("margin-left","-50%");
+        $(".bookcard-list").animate({marginLeft:"0"},800);
+    });
+    $(".next").click(function(){
+        
+        $(".bookcard-list").animate({marginLeft:"-50%"},800, function(){
+            $(".bookcard-list li:first").appendTo(".bookcard-list");
+            $(".bookcard-list").css("margin-left","0");
+        });
+    });
 
+    $.get("../textbox/text.txt",function(data){
+        $(".book-intro").html(data);
+    });
+
+    $.get("../textbox/text1.txt", function(data){
+        $(".book-intro1").html(data);
+    });
 
     // footer
     var count = 0;

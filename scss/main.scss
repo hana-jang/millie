@@ -1,7 +1,20 @@
 @charset "utf-8";
 
-@import "common";
+*{
+    font-family: 'SpoqaHanSansNeo-Regular';
+}
 
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2{
+    font-size:48px;
+    padding:70px 0 30px 0;
+}
 
 @mixin center{
     $center:50%;
@@ -12,10 +25,9 @@
     transform:translate($center1, $center1);
 }
 @mixin transform($x, $y){
-    $center:50%;
     position:absolute;
-    top:$center;
-    left:$center;
+    top:50%;
+    left:50%;
     transform:translate($x, $y);
 }
 @mixin p_style{
@@ -76,8 +88,7 @@
                 position: absolute;
                 top: 85px;
                 left: 45px;
-                // @include opacity();
-                @include animate-ready();
+                @include animate-ready;
             }
 
             img:nth-of-type(2) {
@@ -85,10 +96,7 @@
                 position: absolute;
                 bottom: 98px;
                 left: 47px;
-                // opacity: 0;
-                // @include opacity1();
-                @include animate-ready1();
-                
+                @include animate-ready1;
             }
         }
     }
@@ -127,11 +135,11 @@
         margin:0 auto;
         padding:15px 24px 50px 24px;
         h2{
-            @include animate-ready();
+            @include animate-ready;
         }
         p{
             @include p_style;
-            @include animate-ready1();
+            @include animate-ready1;
         }
         .slide-box{
             max-width:100%;
@@ -173,10 +181,10 @@
         margin:0 auto;
         text-align: center;
         h2{
-            @include animate-ready();
+            @include animate-ready;
         }
         p{
-            @include animate-ready1();
+            @include animate-ready1;
             @include p_style;
         }
 
@@ -208,10 +216,10 @@
     height:1950px;
     text-align: center;
     h2{
-        @include animate-ready();
+        @include animate-ready;
     }
     p{
-        @include animate-ready1();
+        @include animate-ready1;
         @include p_style;
     }
 
@@ -451,10 +459,10 @@
     height: 750px;
     text-align: center;
     h2{
-        @include animate-ready();
+        @include animate-ready;
     }
     p{
-        @include animate-ready1();
+        @include animate-ready1;
         @include p_style;
     }
 
@@ -563,10 +571,10 @@
     text-align: center;
     background-color:#f7f7f7;
     h2{
-        @include animate-ready();
+        @include animate-ready;
     }
     p{
-        @include animate-ready1();
+        @include animate-ready1;
         @include p_style;
     }
     .pick-img-box{
@@ -623,10 +631,10 @@
     background-color: #ffeb60;
     text-align: center;
     h2{
-        @include animate-ready();
+        @include animate-ready;
     }
     >p{
-        @include animate-ready1();
+        @include animate-ready1;
         @include p_style;
     }
 
@@ -868,7 +876,7 @@
                         overflow: hidden;
                         border-radius: 56px;
                         z-index: 10;
-                        @include animate-ready();
+                        @include animate-ready;
 
                         >img {
                             width: 330px;
@@ -1046,10 +1054,10 @@
             h2{
                 font-size:49px;
                 padding:80px 0 30px 0;
-                @include animate-ready();
+                @include animate-ready;
             }
             p{
-                @include animate-ready1();
+                @include animate-ready1;
                 font-size:22px;
                 line-height: 30px;
             }
