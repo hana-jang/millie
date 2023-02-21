@@ -744,6 +744,7 @@ h3 {
   position: relative;
 }
 #main .main-wrap .main-left #authors .authors-box .authors-main .authors-main1 .authors-intro p {
+  font-family: "NanumSquare";
   font-size: 15px;
 }
 #main .main-wrap .main-left #authors .authors-box .authors-main .authors-main1 .authors-intro .hidebox {
