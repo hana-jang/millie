@@ -435,8 +435,16 @@
                 <div class="main-right"></div>
             </div>
         </div>
-       
     </div>
+    <script>
+        $.get("textbox/text.txt", function (data) {
+            $(".book-intro").html(data);
+        });
+
+        $.get("textbox/text1.txt", function (data) {
+            $(".book-intro1").html(data);
+        });
+    </script>
     <footer>
         <div class="footer-wrap">
             <div class="first-footer">

@@ -89,14 +89,6 @@ $(function(){
         });
     });
 
-    $.get("../textbox/text.txt",function(data){
-        $(".book-intro").html(data);
-    });
-
-    $.get("../textbox/text1.txt", function(data){
-        $(".book-intro1").html(data);
-    });
-
     // footer
     var count = 0;
     $(".imformation p").click(function () {
