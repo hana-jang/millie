@@ -225,6 +225,12 @@ h3 {
 #title .title-wrap .title-two .title2-2 .sec1 .sec1-3 table td {
   padding: 20px 0;
 }
+#title .title-wrap .title-two .title2-2 .sec1 .sec1-3 table td a {
+  color: #7da2da;
+}
+#title .title-wrap .title-two .title2-2 .sec1 .sec1-3 table td a:hover {
+  text-decoration: underline;
+}
 #title .title-wrap .title-two .title2-2 .sec1 .sec1-3 .sec1-3-1 {
   background-color: #edf5fe;
   padding: 15px;
@@ -520,13 +526,15 @@ h3 {
 #main .main-wrap {
   width: 1200px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 #main .main-wrap .main-left {
   width: 75%;
 }
 #main .main-wrap .main-left #series {
   width: 100%;
-  margin: 40px 0 75px 0;
+  margin: 40px 0 60px 0;
 }
 #main .main-wrap .main-left #series h3 {
   padding-bottom: 13px;
@@ -555,6 +563,33 @@ h3 {
   font-size: 14px;
   font-weight: bold;
   color: #ff6666;
+}
+#main .main-wrap .main-left #aboutbook {
+  width: 100%;
+  margin: 60px 0 100px 0;
+}
+#main .main-wrap .main-left #aboutbook h3 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
+#main .main-wrap .main-left #aboutbook .aboutbook-table-wrap {
+  border-bottom: 1px solid #ccc;
+}
+#main .main-wrap .main-left #aboutbook .aboutbook-table-wrap table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+#main .main-wrap .main-left #aboutbook .aboutbook-table-wrap table th {
+  width: 18%;
+  padding: 15px 30px 15px 15px;
+  text-align: left;
+  font-size: 14px;
+}
+#main .main-wrap .main-left #aboutbook .aboutbook-table-wrap table td {
+  padding: 10px 30px;
+  font-family: "NanumSquare";
+  font-size: 14px;
 }
 #main .main-wrap .main-left #bookcard {
   width: 100%;
@@ -606,7 +641,7 @@ h3 {
   border-bottom: 1px solid #ccc;
 }
 #main .main-wrap .main-left #introduce h3 {
-  padding-bottom: 13px;
+  padding-bottom: 10px;
   border-bottom: 2px solid #333;
 }
 #main .main-wrap .main-left #introduce .book-intro {
@@ -650,7 +685,7 @@ h3 {
 }
 #main .main-wrap .main-left #detail-img {
   width: 100%;
-  margin: 50px 0;
+  margin: 50px 0 65px 0;
 }
 #main .main-wrap .main-left #detail-img img {
   width: 100%;
@@ -658,17 +693,215 @@ h3 {
 }
 #main .main-wrap .main-left #authors {
   width: 100%;
+  margin-bottom: 100px;
 }
-#main .main-wrap .main-left #authors h3 {
-  padding-bottom: 20px;
+#main .main-wrap .main-left #authors > h3 {
+  padding-bottom: 10px;
   border-bottom: 2px solid #333;
 }
 #main .main-wrap .main-left #authors .authors-box {
+  margin: 50px 0;
   border: 1px solid #ccc;
-  border-radius: 20px;
 }
-#main .main-wrap .main-left #authors .authors-box > div {
+#main .main-wrap .main-left #authors .authors-box .authors-header {
+  height: 50px;
   background-color: #f7f7f7;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-header h4 {
+  padding: 0 30px;
+  font-size: 16px;
+  font-family: "Pretendard-Regular";
+}
+#main .main-wrap .main-left #authors .authors-box .authors-header button {
+  padding: 3px 5px;
+  margin: 0 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main1 {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ccc;
+  margin: 0 30px;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main1 .authors-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  background-image: url("../img1/authors.jpg");
+  background-size: cover;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main1 .authors-intro {
+  width: 70%;
+  position: relative;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main1 .authors-intro p {
+  font-size: 15px;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main1 .authors-intro .hidebox {
+  display: none;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main1 .authors-intro .authors-intro-btnbox {
+  width: 65px;
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main1 .authors-intro .authors-intro-btnbox button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main1 .authors-intro .authors-intro-btnbox .authors-btn {
+  cursor: pointer;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main1 .authors-intro .authors-intro-btnbox .authors-btn-rotate {
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main2 {
+  width: 100%;
+  padding: 20px 0;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main2 .authors-bookbox {
+  width: 90%;
+  margin: 0 auto;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main2 .authors-bookbox .box {
+  height: 220px;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main2 .authors-bookbox .box img {
+  margin-bottom: 10px;
+}
+#main .main-wrap .main-left #authors .authors-box .authors-main .authors-main2 .authors-bookbox .box h4 {
+  width: 140px;
+}
+#main .main-wrap .main-left #company-review {
+  width: 100%;
+  position: relative;
+  margin-bottom: 60px;
+}
+#main .main-wrap .main-left #company-review .com-review-textbox h3 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
+#main .main-wrap .main-left #company-review .com-review-textbox p {
+  letter-spacing: 1px;
+  line-height: 21px;
+  font-family: "NanumSquare";
+}
+#main .main-wrap .main-left #company-review .com-review-textbox .com-review1 {
+  margin-top: 30px;
+}
+#main .main-wrap .main-left #company-review .com-review-textbox .com-review-hidebox {
+  display: none;
+}
+#main .main-wrap .main-left #company-review .com-review-textbox.com-review-pointer {
+  cursor: pointer;
+}
+#main .main-wrap .main-left #company-review .com-review-btnbox {
+  width: 65px;
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#main .main-wrap .main-left #company-review .com-review-btnbox button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+#main .main-wrap .main-left #company-review .com-review-btnbox .review-btn {
+  cursor: pointer;
+}
+#main .main-wrap .main-left #company-review .com-review-btnbox .review-btn-rotate {
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+#main .main-wrap .main-right {
+  width: 22%;
+  padding: 30px 0;
+}
+#main .main-wrap .main-right .anotherbook {
+  width: 80%;
+  margin-bottom: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+#main .main-wrap .main-right .anotherbook h3 {
+  padding: 10px 13px 5px 22px;
+  text-align: left;
+  font-size: 16px;
+}
+#main .main-wrap .main-right .anotherbook .another-box {
+  margin-bottom: 10px;
+}
+#main .main-wrap .main-right .anotherbook .another-box img {
+  width: 165px;
+  border: 1px solid #ccc;
+  padding: 0 15px;
+  margin-bottom: 5px;
+}
+#main .main-wrap .main-right .anotherbook .another-box .another-box-text p {
+  padding-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+#main .main-wrap .main-right .right-best {
+  width: 80%;
+  padding-bottom: 10px;
+  border: 1px solid #ccc;
+}
+#main .main-wrap .main-right .right-best h3 {
+  padding: 20px 13px 5px 13px;
+  font-size: 16px;
+}
+#main .main-wrap .main-right .right-best h3 a {
+  margin-left: 30px;
+  font-size: 13px;
+}
+#main .main-wrap .main-right .right-best .right-best-box {
+  margin: 15px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#main .main-wrap .main-right .right-best .right-best-box img {
+  width: 80px;
+}
+#main .main-wrap .main-right .right-best .right-best-box div {
+  width: 95px;
+}
+#main .main-wrap .main-right .right-best .right-best-box div a {
+  font-weight: bold;
+  font-size: 14px;
+}
+#main .main-wrap .main-right .right-best .right-best-box div a:hover {
+  text-decoration: underline;
+}
+#main .main-wrap .main-right .right-best .right-best-box div p {
+  font-size: 13px;
+  color: #888;
+}
+#main .main-wrap .main-right .right-best .right-best-box div b {
+  font-size: 13px;
+  color: #4dac27;
+}
+#main .main-wrap .main-right .right-best .right-best-box div span {
+  font-size: 13px;
 }

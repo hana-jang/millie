@@ -278,6 +278,12 @@ h3{
                             }
                             td {
                                 padding: 20px 0;
+                                a{
+                                    color:#7da2da;
+                                }
+                                a:hover{
+                                    text-decoration: underline;
+                                }
                             }
                         }
                         .sec1-3-1{
@@ -644,13 +650,13 @@ h3{
     .main-wrap {
         width: 1200px;
         margin: 0 auto;
-
+        display:flex;
+        justify-content: space-between;
         .main-left {
             width: 75%;
-
             #series {
                 width: 100%;
-                margin: 40px 0 75px 0;
+                margin: 40px 0 60px 0;
 
                 h3 {
                     padding-bottom: 13px;
@@ -685,6 +691,33 @@ h3{
                 }
                 
             }    
+            #aboutbook{
+                width:100%;
+                margin:60px 0 100px 0;
+                h3{
+                    padding-bottom:10px;
+                    border-bottom:2px solid #333;
+                }
+                .aboutbook-table-wrap{
+                    border-bottom:1px solid #ccc;
+                    table{
+                        width:100%;
+                        margin:20px 0;
+                        border-collapse: collapse;
+                        th{
+                            width:18%;
+                            padding:15px 30px 15px 15px;
+                            text-align: left;
+                            font-size:14px;
+                        }
+                        td{
+                            padding:10px 30px;
+                            font-family: 'NanumSquare';
+                            font-size:14px;
+                        }
+                    }
+                }
+            }
             #bookcard{
                 width:100%;
                 padding-bottom:45px;
@@ -738,7 +771,7 @@ h3{
                 border-bottom:1px solid #ccc;
 
                 h3{
-                    padding-bottom:13px;
+                    padding-bottom:10px;
                     border-bottom:2px solid #333;
                 }
 
@@ -790,7 +823,7 @@ h3{
             }
             #detail-img{
                 width:100%;
-                margin:50px 0;
+                margin:50px 0 65px 0;
                 img{
                     width:100%;
                     border-radius: 20px;
@@ -798,17 +831,224 @@ h3{
             }
             #authors{
                 width:100%;
-                h3{
-                    padding-bottom:20px;
+                margin-bottom:100px;
+                >h3{
+                    padding-bottom:10px;
                     border-bottom:2px solid #333;
                 }
                 .authors-box {
+                    margin:50px 0;
                     border: 1px solid #ccc;
-                    border-radius: 20px;
-                    >div{
+                    .authors-header{
+                        height: 50px;
                         background-color: #f7f7f7;
-                        display:flex;
+                        display: flex;
                         justify-content: space-between;
+                        align-items: center;
+                        h4{
+                            padding:0 30px;
+                            font-size:16px;
+                            font-family: 'Pretendard-Regular';
+                        }
+                        button{
+                            padding:3px 5px;
+                            margin:0 30px;
+                            border:1px solid #ccc;
+                            border-radius: 5px;
+                            background-color:#fff;
+                            cursor: pointer;
+                        }
+                    }
+                    .authors-main{
+                        .authors-main1{
+                            padding:40px 0;
+                            display:flex;
+                            justify-content: space-around;
+                            border-bottom:1px solid #ccc;
+                            margin:0 30px;
+                            .authors-img{
+                                width:100px;
+                                height:100px;
+                                border-radius: 60px;
+                                background-image:url("../img1/authors.jpg");
+                                background-size:cover;
+                                background-position:50% 10%;
+                                background-repeat: no-repeat;
+                            }
+                            .authors-intro{
+                                width:70%;
+                                position:relative;
+                                p{
+                                    font-size:15px;
+                                }
+                                .hidebox{
+                                    display:none;
+                                }
+                                .authors-intro-btnbox{
+                                    width:65px;
+                                    position:absolute;
+                                    bottom:-15px;
+                                    right:0;
+                                    display:flex;
+                                    justify-content: space-between;
+                                    button{
+                                        border:none;
+                                        background-color:#fff;
+                                        cursor: pointer;
+                                        font-weight: bold;
+                                    }
+                                    .authors-btn{
+                                        cursor: pointer;
+                                    }
+                                    .authors-btn-rotate{
+                                        cursor: pointer;
+                                        transform:rotate(180deg);
+                                    }
+                                }
+                            }
+                        }
+                        .authors-main2{
+                            width:100%;
+                            padding:20px 0;
+                            .authors-bookbox{
+                                width:90%;
+                                margin:0 auto;
+                                padding:25px 0;
+                                display:flex;
+                                justify-content: space-between;
+                                .box{
+                                    height:220px;
+                                    img{
+                                        margin-bottom:10px;
+                                    }
+                                    h4{
+                                        width:140px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #company-review {
+                width: 100%;
+                position:relative;
+                margin-bottom:60px;
+
+                .com-review-textbox {
+                    h3 {
+                        padding-bottom: 10px;
+                        border-bottom: 2px solid #333;
+                    }
+
+                    p {
+                        letter-spacing: 1px;
+                        line-height: 21px;
+                        font-family: 'NanumSquare';
+                    }
+
+                    .com-review1 {
+                        margin-top: 30px;
+                    }
+                    .com-review-hidebox{
+                        display:none;
+                    }
+                    &.com-review-pointer{
+                        cursor: pointer;
+                    }
+                }
+                .com-review-btnbox{
+                    width:65px;
+                    position:absolute;
+                    bottom:-25px;
+                    right:0;
+                    display:flex;
+                    justify-content: space-between;
+                    button{
+                        border:none;
+                        background-color:#fff;
+                        cursor: pointer;
+                        font-weight: bold;
+                    }
+                    .review-btn{
+                        cursor: pointer;
+                    }
+                    .review-btn-rotate{
+                        cursor: pointer;
+                        transform:rotate(180deg);
+                    }
+                }
+            }
+        }
+        .main-right{
+            width:22%;
+            padding:30px 0;
+            .anotherbook{
+                width:80%;
+                margin-bottom:30px;
+                text-align: center;
+                border:1px solid #ccc;
+                h3{
+                    padding:10px 13px 5px 22px;
+                    text-align: left;
+                    font-size:16px;
+                }
+                .another-box{
+                    margin-bottom:10px;
+                    img{
+                        width:165px;
+                        border:1px solid #ccc;
+                        padding:0 15px;
+                        margin-bottom:5px;
+                    }
+                    .another-box-text{
+                        p{
+                            padding-top:5px;
+                            font-size:14px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .right-best{
+                width:80%;
+                padding-bottom:10px;
+                border:1px solid #ccc;
+                h3{
+                    padding:20px 13px 5px 13px;
+                    font-size:16px;
+                    a{
+                        margin-left:30px;
+                        font-size:13px;
+                    }
+                }
+                .right-best-box{
+                    margin:15px 0px;
+                    display:flex;
+                    justify-content: space-evenly;
+                    img{
+                        width:80px;
+                    }
+                    div{
+                        width:95px;
+                        a{
+                            font-weight: bold;
+                            font-size:14px;
+                        }
+                        a:hover{
+                            text-decoration: underline;
+                        }
+                        p{
+                            font-size:13px;
+                            color:#888;
+                        }
+                        b{
+                            font-size:13px;
+                            color:#4dac27;
+                        }
+                        span{
+                            font-size:13px;
+                        }
                     }
                 }
             }

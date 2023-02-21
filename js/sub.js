@@ -79,15 +79,77 @@ $(function(){
         $(".bookcard-list li:last").prependTo(".bookcard-list");
         // $(".bookcard-list").css("margin-left","calc(30px - 50%)");
         $(".bookcard-list").css("margin-left","-50%");
-        $(".bookcard-list").animate({marginLeft:"0"},800);
+        $(".bookcard-list").animate({marginLeft:"0"},550);
     });
     $(".next").click(function(){
         
-        $(".bookcard-list").animate({marginLeft:"-50%"},800, function(){
+        $(".bookcard-list").animate({marginLeft:"-50%"},550, function(){
             $(".bookcard-list li:first").appendTo(".bookcard-list");
             $(".bookcard-list").css("margin-left","0");
         });
     });
+
+    var count=0;
+    $(".read-more").click(function(){
+        count++;
+        if(count%2==1){
+            $(this).html('<span>접어두기 </span>');
+        } else if(count%2==0){
+            $(this).html('<span>펼쳐보기 </span>');
+        }
+        $(".hidebox").toggle();
+        $(".authors-btn").toggleClass("authors-btn-rotate");
+    });
+
+    $(".authors-btn").click(function(){
+        count++;
+        if(count%2==1){
+            $(this).prev().html('<span>접어두기 </span>');
+        } else if(count%2==0){
+            $(this).prev().html('<span>펼쳐보기 </span>');
+        }
+        $(".hidebox").toggle();
+        $(this).toggleClass("authors-btn-rotate");
+    });
+
+    $(".com-review-textbox").click(function(){
+        count++;
+        if(count%2==1){
+            $(this).next().children("button").html(`<span>접어두기 </span>`);
+        } else if(count%2==0){
+            $(this).next().children("button").html(`<span>펼쳐보기 </span>`);
+        }
+        $(".com-review-hidebox").toggle();
+        $(".review-btn").toggleClass("review-btn-rotate");
+        $(this).toggleClass("com-review-pointer");
+    });
+    $(".read-more1").click(function(){
+        count++;
+        if(count%2==1){
+            $(this).html(`<span>접어두기 </span>`);
+        } else if(count%2==0){
+            $(this).html(`<span>펼쳐보기 </span>`);
+        }
+        $(".com-review-hidebox").toggle();
+        $(".review-btn").toggleClass("review-btn-rotate");
+        $(this).parent().prev().toggleClass("com-review-pointer");
+    });
+    $(".review-btn").click(function(){
+        count++;
+        if(count%2==1){
+            $(this).prev().html(`<span>접어두기 </span>`);
+        } else if(count%2==0){
+            $(this).prev().html(`<span>펼쳐보기 </span>`);
+        }
+        $(".com-review-hidebox").toggle();
+        $(this).toggleClass("review-btn-rotate");
+        $(this).parent().prev().toggleClass("com-review-pointer");
+    })
+
+
+
+
+
 
     // footer
     var count = 0;
