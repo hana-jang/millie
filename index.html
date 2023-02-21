@@ -130,7 +130,7 @@
 
                 for (var i = 0; i < 3; i++) {
                     // 3개밖에 없어서 굳이 box.length로 할 필요 없음
-                    $(".best-box").eq(i).append("<img src='" + msg.documents[i].thumbnail + "'>");
+                    $(".best-box").eq(i).append("<a href='sub.html'><img src='" + msg.documents[i].thumbnail + "'></a>");
                     $(".best-box").eq(i).append("<h4>"  + msg.documents[i].title + "</h4>");
                     $(".best-box").eq(i).append("<h5>" + msg.documents[i].authors + "</h5>");
                     $(".best-box").eq(2).append("<img src='img/audio-icon.png' class='best-box-icon'>");
