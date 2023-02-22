@@ -144,6 +144,71 @@ $(function(){
         $(".com-review-hidebox").toggle();
         $(this).toggleClass("review-btn-rotate");
         $(this).parent().prev().toggleClass("com-review-pointer");
+    });
+
+
+    $(".small-star1").click(function(){
+        count++;
+        if(count%2==1){
+            $(this).attr("src","img1/sbluestar1.png");
+            $(this).siblings().hide();
+        } else if(count%2==0){
+            $(this).attr("src","img1/graystar1.png");
+            $(this).siblings().show();
+        }
+    });
+
+    $(".small-star2").click(function(){
+        count++;
+        if(count%2==1){
+            $(this).attr("src","img1/sbluestar2.png");
+            $(this).siblings().hide();
+        } else if(count%2==0){
+            $(this).attr("src","img1/graystar1.png");
+            $(this).siblings().show();
+        }
+    });
+    $(".small-star3").click(function(){
+        count++;
+        if(count%2==1){
+            $(this).attr("src","img1/sbluestar3.png");
+            $(this).siblings().hide();
+        } else if(count%2==0){
+            $(this).attr("src","img1/graystar1.png");
+            $(this).siblings().show();
+        }
+    });
+    $(".small-star4").click(function(){
+        count++;
+        if(count%2==1){
+            $(this).attr("src","img1/sbluestar4.png");
+            $(this).siblings().hide();
+        } else if(count%2==0){
+            $(this).attr("src","img1/graystar1.png");
+            $(this).siblings().show();
+        }
+    });
+    $(".small-star5").click(function(){
+        count++;
+        if(count%2==1){
+            $(this).attr("src","img1/sbluestar5.png");
+            $(this).siblings().hide();
+        } else if(count%2==0){
+            $(this).attr("src","img1/graystar1.png");
+            $(this).siblings().show();
+        }
+    });
+
+
+
+
+    $(".korean").keyup(function(e){
+        var text=$(this).val();
+        $(this).next().html(`<b>${text.length}</b> / 50`);
+    });
+
+    $(".send").click(function(){
+        confirm("로그인이 필요합니다. \n로그인 하시겠습니까?");
     })
 
 
