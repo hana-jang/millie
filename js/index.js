@@ -9,6 +9,7 @@ $(function(){
         $(this).hide;
         $(".video-img-box img").hide();
         $(this).prev().show();
+        $(this).prev().attr("src","https://www.youtube.com/embed/u1OVbU4EdwI?autoplay=1&mute=1")
     });
 
     $(".second-call-book-title li").click(function(){
@@ -42,7 +43,8 @@ $(function(){
     $(".playbtn1").click(function(){
         $(this).hide();
         $(".review-img-box img").hide();
-        $(this).prev().show()
+        $(this).prev().show();
+        $(this).prev().attr("src","https://www.youtube.com/embed/c-XG8k_w1LM?autoplay=1&mute=1")
     });
 
     $(".qna-list li").click(function(){
@@ -50,35 +52,20 @@ $(function(){
         $(this).children().children(".openbtn").toggleClass("openbtn-rotate");
     });
 
-    var count=0;
-    $(".imformation p").click(function(){
-        count++;
-        if(count%2==1){
-            $(this).children().html("<b>사업자 정보 닫기</b>");
-        } else if(count%2==0){
-            $(this).children().html("<b>사업자 정보 펼쳐보기</b>");
-        }
-        $(this).next().toggleClass("openbtn-rotate"); 
-        $(".imfor-list").toggle();
-    });
-    $(".openbtn1").click(function(){
-        count++;
-        if(count%2==1){
-            $(this).prev().html("<b>사업자 정보 닫기</b>");
-        } else if(count%2==0){
-            $(this).prev().html("<b>사업자 정보 펼쳐보기</b>");
-        }
-        $(this).toggleClass("openbtn-rotate"); 
-        $(".imfor-list").toggle();
-    });
-
-
     $(".slider-box-1>img").css({"transform":"translateY(0px)","opacity":"1"});
 
     $(window).scroll(function(){
         var scroll=$(window).scrollTop();
         // console.log(scroll);
-    
+        
+        // logo 이미지 변경하기
+        if (scroll < 799) {
+            $(".logo img").attr("src", "img/logo.png");
+        }
+        if (scroll > 800) {
+            $(".logo img").attr("src", "img/logo1.png");
+        }
+
         if(0<scroll<200){
             $(".booklist-wrap h2").css({"transform":"translateY(50px)","opacity":"0"});
             $(".booklist-wrap p").css({"transform":"translateY(50px)","opacity":"0"});
@@ -200,14 +187,6 @@ $(function(){
             $(".pick-img-box img").eq(5).css("transform","scale(0.3)");
         }
 
-        // logo 이미지 변경하기
-        if(scroll<799){
-            $(".logo img").attr("src","img/logo.png");
-        }
-        if(scroll>800){
-            $(".logo img").attr("src","img/logo1.png");
-        }
-        
         // 책 리스트 fadein 하기
         if(scroll>2700){
             $(".best-all-box").fadeIn();

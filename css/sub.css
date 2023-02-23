@@ -347,10 +347,11 @@ h3 {
 }
 #manybuy .manybuy-wrap .manybuy-list ul li {
   width: 599px;
-  background-color: #f8f8f8;
   padding: 20px 0;
+  background-color: #f8f8f8;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
 }
 #manybuy .manybuy-wrap .manybuy-list ul li:nth-of-type(1) {
   border-right: 1px solid #e5e5e5;
@@ -840,13 +841,14 @@ h3 {
 }
 #main .main-wrap .main-left #review {
   width: 100%;
+  margin-bottom: 80px;
 }
 #main .main-wrap .main-left #review > h3:first-child {
   padding-bottom: 10px;
   border-bottom: 2px solid #333;
 }
 #main .main-wrap .main-left #review .review-box-graph {
-  margin: 30px 0 60px 0;
+  margin: 30px 0 60px;
   padding: 30px 0;
   background-color: #f8f8f8;
   border: 1px solid #ccc;
@@ -863,7 +865,7 @@ h3 {
   color: #196ab3;
 }
 #main .main-wrap .main-left #review .review-box-graph .review-header .rv-header-box > div {
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
   display: flex;
   justify-content: center;
 }
@@ -1066,7 +1068,7 @@ h3 {
   color: #777;
 }
 #main .main-wrap .main-left #review > h3:nth-child(3) {
-  padding: 35px 0 10px 0;
+  padding: 35px 0 10px;
   border-top: 1px solid #ccc;
 }
 #main .main-wrap .main-left #review .review-box-input {
@@ -1083,8 +1085,27 @@ h3 {
   font-size: 17px;
   font-weight: bold;
 }
-#main .main-wrap .main-left #review .review-box-input > div:first-child img {
+#main .main-wrap .main-left #review .review-box-input > div:first-child #starbox ul li {
+  width: 24px;
+  height: 22px;
+  float: left;
+  background: url(../img1/star.png) no-repeat;
   cursor: pointer;
+}
+#main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star1 .s1 {
+  background-position: 0 -24px;
+}
+#main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star2 .s1, #main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star2 .s2 {
+  background-position: 0 -24px;
+}
+#main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star3 .s1, #main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star3 .s2, #main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star3 .s3 {
+  background-position: 0 -24px;
+}
+#main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star4 .s1, #main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star4 .s2, #main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star4 .s3, #main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star4 .s4 {
+  background-position: 0 -24px;
+}
+#main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star5 .s1, #main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star5 .s2, #main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star5 .s3, #main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star5 .s4, #main .main-wrap .main-left #review .review-box-input > div:first-child #starbox.star5 .s5 {
+  background-position: 0 -24px;
 }
 #main .main-wrap .main-left #review .review-box-input > div:last-child {
   position: relative;
@@ -1117,6 +1138,119 @@ h3 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-header {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-header > div {
+  width: 48%;
+  margin-top: 30px;
+  padding: 30px 30px 17px;
+  background-color: #f8f8f8;
+  border: 1px solid #ebebeb;
+  font-family: "NanumSquare";
+}
+#main .main-wrap .main-left #review .review-list .rv-list-header > div img {
+  width: 80px;
+  margin-bottom: 3px;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-header > div ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-header > div ul li {
+  font-size: 13px;
+  color: #888;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-header > div ul li:not(:last-child) {
+  padding-right: 7px;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-header > div ul li button {
+  padding: 3px 7px;
+  font-size: 13px;
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-header > div ul li:not(:last-child):after {
+  content: "|";
+  padding-left: 7px;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-header > div p {
+  height: 40px;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-bottom {
+  padding: 10px 35px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-bottom div:nth-of-type(1) {
+  width: 200px;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-bottom div:nth-of-type(1) li {
+  padding: 3px 8px;
+  font-size: 13px;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-bottom div:nth-of-type(1) li:nth-of-type(2) {
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-bottom div:nth-of-type(1) li:not(:first-child, :last-child):hover {
+  border: 1px solid #ccc;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-bottom div:nth-of-type(2) {
+  width: 150px;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-bottom div:nth-of-type(2) li {
+  font-size: 15px;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-bottom div:nth-of-type(2) li:first-child a {
+  font-weight: bold;
+  color: #196ab3;
+}
+#main .main-wrap .main-left #review .review-list .rv-list-bottom div ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#main .main-wrap .main-left #delivery h3 {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
+#main .main-wrap .main-left #delivery > ul {
+  margin-bottom: 35px;
+}
+#main .main-wrap .main-left #delivery > ul > li {
+  padding: 30px 0;
+}
+#main .main-wrap .main-left #delivery > ul > li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+#main .main-wrap .main-left #delivery > ul > li b {
+  margin-bottom: 10px;
+  display: inline-block;
+  font-family: "NanumSquare";
+  font-size: 15px;
+}
+#main .main-wrap .main-left #delivery > ul > li:last-child > ul > li:last-child {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  color: #888;
+}
+#main .main-wrap .main-left #delivery ul li {
+  font-family: "NanumSquare";
+  font-size: 14px;
 }
 #main .main-wrap .main-right {
   width: 22%;
@@ -1201,4 +1335,24 @@ h3 {
 }
 #main .main-wrap .main-right .right-best .right-best-box div p:nth-of-type(2) span {
   font-weight: bold;
+}
+
+#topbtn {
+  width: 55px;
+  height: 55px;
+  background-color: #fff;
+  color: #999;
+  border: 2px solid #ccc;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 25px;
+  line-height: 53px;
+}
+
+footer {
+  border-top: 1px solid #ccc;
 }

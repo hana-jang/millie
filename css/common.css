@@ -21,8 +21,8 @@ h1, h2, h3, h4, h5, h6 {
 body {
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
+  position: relative;
 }
 
 @font-face {

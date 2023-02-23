@@ -25,6 +25,7 @@ $(function(){
     }
     $(".sec1-3-1 span").eq(1).html("<u>오늘(" +month+"/"+date+", "+day+")</u> 도착예정")
 
+
     // 수량 버튼 누르면 숫자 변경
     var input=document.getElementById("result");
     var result=Number(input.value);
@@ -77,7 +78,6 @@ $(function(){
 
     $(".prev").click(function(){
         $(".bookcard-list li:last").prependTo(".bookcard-list");
-        // $(".bookcard-list").css("margin-left","calc(30px - 50%)");
         $(".bookcard-list").css("margin-left","-50%");
         $(".bookcard-list").animate({marginLeft:"0"},550);
     });
@@ -147,60 +147,12 @@ $(function(){
     });
 
 
-    $(".small-star1").click(function(){
-        count++;
-        if(count%2==1){
-            $(this).attr("src","img1/sbluestar1.png");
-            $(this).siblings().hide();
-        } else if(count%2==0){
-            $(this).attr("src","img1/graystar1.png");
-            $(this).siblings().show();
-        }
-    });
+    $("#starbox ul li").click(function(){
+        var index=$(this).index()+1;
 
-    $(".small-star2").click(function(){
-        count++;
-        if(count%2==1){
-            $(this).attr("src","img1/sbluestar2.png");
-            $(this).siblings().hide();
-        } else if(count%2==0){
-            $(this).attr("src","img1/graystar1.png");
-            $(this).siblings().show();
-        }
+        $("#starbox").removeClass();
+        $("#starbox").addClass("star"+index);
     });
-    $(".small-star3").click(function(){
-        count++;
-        if(count%2==1){
-            $(this).attr("src","img1/sbluestar3.png");
-            $(this).siblings().hide();
-        } else if(count%2==0){
-            $(this).attr("src","img1/graystar1.png");
-            $(this).siblings().show();
-        }
-    });
-    $(".small-star4").click(function(){
-        count++;
-        if(count%2==1){
-            $(this).attr("src","img1/sbluestar4.png");
-            $(this).siblings().hide();
-        } else if(count%2==0){
-            $(this).attr("src","img1/graystar1.png");
-            $(this).siblings().show();
-        }
-    });
-    $(".small-star5").click(function(){
-        count++;
-        if(count%2==1){
-            $(this).attr("src","img1/sbluestar5.png");
-            $(this).siblings().hide();
-        } else if(count%2==0){
-            $(this).attr("src","img1/graystar1.png");
-            $(this).siblings().show();
-        }
-    });
-
-
-
 
     $(".korean").keyup(function(e){
         var text=$(this).val();
@@ -209,36 +161,26 @@ $(function(){
 
     $(".send").click(function(){
         confirm("로그인이 필요합니다. \n로그인 하시겠습니까?");
-    })
-
-
-
-
-
-
-    // footer
-    var count = 0;
-    $(".imformation p").click(function () {
-        count++;
-        if (count % 2 == 1) {
-            $(this).children().html("<b>사업자 정보 닫기</b>");
-        } else if (count % 2 == 0) {
-            $(this).children().html("<b>사업자 정보 펼쳐보기</b>");
-        }
-        $(this).next().toggleClass("openbtn-rotate");
-        $(".imfor-list").toggle();
     });
-    $(".openbtn1").click(function () {
-        count++;
-        if (count % 2 == 1) {
-            $(this).prev().html("<b>사업자 정보 닫기</b>");
-        } else if (count % 2 == 0) {
-            $(this).prev().html("<b>사업자 정보 펼쳐보기</b>");
-        }
-        $(this).toggleClass("openbtn-rotate");
-        $(".imfor-list").toggle();
+
+    // top버튼 누르면 부드럽게 위로 고고
+    $("#topbtn").click(function(){
+        $('html').animate({scrollTop:0},600);
     });
-})
+
+    // 도서정보, 리뷰, 배송반품교환(choice-nav) 버튼 눌러서 내려간 다음에 top버튼으로 올라올 경우 첫번째만 css 들어가게 하기
+    $(window).scroll(function () {
+        var scroll=$(window).scrollTop();
+        console.log(scroll);
+        if (scroll > 1500){
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).addClass("cho-nav-bg");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).children().addClass("cho-nav-font");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).siblings().removeClass("cho-nav-bg");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).siblings().children().removeClass("cho-nav-font");
+        }
+    });
+
+});
     
 
 
