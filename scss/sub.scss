@@ -18,6 +18,7 @@ h3{
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 /* font-family: 'NanumSquare'; */
 
+header{background-color:#fff;}
 
 #All {
     padding-top: 65px;
@@ -29,7 +30,7 @@ h3{
     border-bottom:1px solid #e5e5e5;
 
     .map-wrap {
-        width: 1400px;
+        width: 1200px;
         margin: 0 auto;
         padding: 10px 0;
 
@@ -38,13 +39,17 @@ h3{
 
             li {
                 font-size: 12px;
-
+                padding:0 3px;
                 a {
                     img {
-                        width: 20px;
-                        height: 20px;
+                        width: 15px;
+                        height: 15px;
                         margin-bottom: -4px;
                     }
+                }
+                .map-right{
+                    color:#999;
+                    font-size:12px;
                 }
             }
         }
@@ -570,6 +575,7 @@ h3{
     width:100%;
     background-color:#f8f8f8;
     border-bottom:1px solid #333;
+    
     .choice-nav-wrap{
         width:1200px;
         margin:0 auto;
@@ -1356,11 +1362,11 @@ h3{
                                 li{
                                     padding:3px 8px;
                                     font-size:13px;
-                                    &:nth-of-type(2){
+                                    &:nth-of-type(3){
                                         font-weight: bold;
                                         border:1px solid #ccc;
                                     }
-                                    &:not(:first-child, :last-child):hover{
+                                    &:not(:nth-of-type(1), :nth-of-type(2),:nth-of-type(8),:last-child):hover{
                                         border:1px solid #ccc;
                                     }
                                 }
@@ -1521,7 +1527,8 @@ h3{
     height:55px;
     background-color:#fff;
     color:#999;
-    border:2px solid #ccc;
+    // border:2px solid #ccc;
+    box-shadow: 0px 0px 10px #ccc;
     border-radius: 40px;
     position:fixed;
     bottom:30px;
@@ -1530,6 +1537,7 @@ h3{
     text-align: center;
     font-size:25px;
     line-height: 53px;
+    display:none;
 }
 
 footer{

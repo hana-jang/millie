@@ -40,15 +40,12 @@ $(function(){
             result=1;
         }
     }
-
     document.getElementById("plus").onclick=function(){
         result++;
         input.value=result;
     }
 
-
     // 많이 구매한 부분
-    
     $(".manybuy-list ul li").click(function(){
         var mb_num=$(this).index();
 
@@ -59,15 +56,7 @@ $(function(){
         $(this).siblings().removeClass("mb-click");
     });
 
-
-    // 도서정보 탭 클릭 이벤트
-    $(".choice-nav-wrap ul:nth-of-type(1) li").click(function(){
-        $(this).children().addClass("cho-nav-font");
-        $(this).siblings().children().removeClass("cho-nav-font");
-        $(this).addClass("cho-nav-bg");
-        $(this).siblings().removeClass("cho-nav-bg");
-    });
-
+    // bookcard 슬라이드 이벤트
     $(".bookcard-wrap").hover(function(){
         $(".prev").fadeIn();
         $(".next").fadeIn();
@@ -75,20 +64,19 @@ $(function(){
         $(".prev").fadeOut();
         $(".next").fadeOut();
     });
-
     $(".prev").click(function(){
         $(".bookcard-list li:last").prependTo(".bookcard-list");
         $(".bookcard-list").css("margin-left","-50%");
         $(".bookcard-list").animate({marginLeft:"0"},550);
     });
     $(".next").click(function(){
-        
         $(".bookcard-list").animate({marginLeft:"-50%"},550, function(){
             $(".bookcard-list li:first").appendTo(".bookcard-list");
             $(".bookcard-list").css("margin-left","0");
         });
     });
 
+    //작가소개 정보 접어둔거 펼쳐보기
     var count=0;
     $(".read-more").click(function(){
         count++;
@@ -112,6 +100,7 @@ $(function(){
         $(this).toggleClass("authors-btn-rotate");
     });
 
+    //출판사리뷰 접어둔 정보 펼쳐보기
     $(".com-review-textbox").click(function(){
         count++;
         if(count%2==1){
@@ -146,7 +135,7 @@ $(function(){
         $(this).parent().prev().toggleClass("com-review-pointer");
     });
 
-
+    //별점 별 누르면 색깔 칠해지는거 css 넣고 빼기
     $("#starbox ul li").click(function(){
         var index=$(this).index()+1;
 
@@ -154,32 +143,103 @@ $(function(){
         $("#starbox").addClass("star"+index);
     });
 
+    // 한줄평 input text 창 글씨 쓰면 글자수 카운트하기
     $(".korean").keyup(function(e){
         var text=$(this).val();
         $(this).next().html(`<b>${text.length}</b> / 50`);
     });
 
+    // 한줄평 버튼 누르면 확인/취소창 뜨기
     $(".send").click(function(){
         confirm("로그인이 필요합니다. \n로그인 하시겠습니까?");
     });
 
     // top버튼 누르면 부드럽게 위로 고고
     $("#topbtn").click(function(){
-        $('html').animate({scrollTop:0},600);
+        $('html').animate({scrollTop:0},400);
     });
+
+    
+    // 도서정보 탭 클릭 이벤트
+    // $(".choice-nav-wrap ul:nth-of-type(1) li").click(function(){
+    //     $(this).children().addClass("cho-nav-font");
+    //     $(this).siblings().children().removeClass("cho-nav-font");
+    //     $(this).addClass("cho-nav-bg");
+    //     $(this).siblings().removeClass("cho-nav-bg");
+    // });
 
     // 도서정보, 리뷰, 배송반품교환(choice-nav) 버튼 눌러서 내려간 다음에 top버튼으로 올라올 경우 첫번째만 css 들어가게 하기
     $(window).scroll(function () {
         var scroll=$(window).scrollTop();
         console.log(scroll);
-        if (scroll > 1500){
+        if (scroll<=500){
             $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).addClass("cho-nav-bg");
             $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).children().addClass("cho-nav-font");
             $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).siblings().removeClass("cho-nav-bg");
             $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).siblings().children().removeClass("cho-nav-font");
         }
+
+        if(scroll < 7865){
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).addClass("cho-nav-bg");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).children().addClass("cho-nav-font");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).siblings().removeClass("cho-nav-bg");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).siblings().children().removeClass("cho-nav-font");
+        }
+
+        if(scroll>9100){
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(1).addClass("cho-nav-bg");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(1).children().addClass("cho-nav-font");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(1).siblings().removeClass("cho-nav-bg");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(1).siblings().children().removeClass("cho-nav-font");
+        }
+
+        if(scroll>10610){
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(2).addClass("cho-nav-bg");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(2).children().addClass("cho-nav-font");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(2).siblings().removeClass("cho-nav-bg");
+            $(".choice-nav-wrap ul:nth-of-type(1) li").eq(2).siblings().children().removeClass("cho-nav-font");
+        }
+
+        if(scroll > 300){
+            $("#topbtn").fadeIn();
+        }
+        if(scroll<300){
+            $("#topbtn").fadeOut();
+        }
+
+        if(scroll>1220){
+            $("#choice-nav").css({"position":"fixed","top":"63px","z-index":"10"});
+        }
+        if(scroll<1220){
+            $("#choice-nav").css({"position":"relative","top":"0"});
+        }
     });
 
+    // 리뷰, 배송/반품/교환 버튼 누르면 해당 자리로 이동하기
+    $(".choice-nav-wrap ul:nth-of-type(1) li:nth-of-type(1)").click(function(){
+        let intro=$("#introduce");
+        let offset=intro.offset().top-160;
+        $("html").animate({scrollTop:offset},300);
+    });
+
+    $(".choice-nav-wrap ul:nth-of-type(1) li:nth-of-type(2)").click(function(){
+        let review=$("#review");
+        let offset=review.offset().top-180;
+
+        $("html").animate({scrollTop:offset},300);
+    });
+
+    $(".choice-nav-wrap ul:nth-of-type(1) li:nth-of-type(3)").click(function(){
+        let delivery=$("#delivery");
+        let offset=delivery.offset().top-150;
+
+        $("html").animate({scrollTop:offset},300);
+    });
+
+    // 좋아요 버튼 누르면 로그인 경고창
+    $(".rv-list-header>div>ul>li>button").click(function(){
+        confirm("로그인이 필요합니다. \n로그인 하시겠습니까?");
+    })
 });
     
 
