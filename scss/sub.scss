@@ -118,9 +118,13 @@ header{background-color:#fff;}
 
                     li {
                         padding-right: 7px;
+                        font-size:13px;
 
                         a {
                             font-size: 13px;
+                            &:hover{
+                                text-decoration: underline;
+                            }
                         }
 
                         span {
@@ -160,6 +164,9 @@ header{background-color:#fff;}
                     li:nth-child(2) {
                         font-size: 13px;
                         line-height: 28px;
+                        a:hover{
+                            text-decoration: underline;
+                        }
                     }
 
                     li:nth-child(3) {
@@ -185,6 +192,9 @@ header{background-color:#fff;}
                             width: 48px;
                             height: 18px;
                             margin-bottom: -4px;
+                        }
+                        a:hover{
+                            text-decoration: underline;
                         }
                     }
 
@@ -851,6 +861,9 @@ header{background-color:#fff;}
                             padding:0 30px;
                             font-size:16px;
                             font-family: 'Pretendard-Regular';
+                            a:hover{
+                                text-decoration: underline  ;
+                            }
                         }
                         button{
                             padding:3px 5px;
@@ -1527,12 +1540,11 @@ header{background-color:#fff;}
     height:55px;
     background-color:#fff;
     color:#999;
-    // border:2px solid #ccc;
     box-shadow: 0px 0px 10px #ccc;
     border-radius: 40px;
     position:fixed;
     bottom:30px;
-    right:50px;
+    right:35px;
     cursor: pointer;
     text-align: center;
     font-size:25px;

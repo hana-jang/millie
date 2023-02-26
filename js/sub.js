@@ -224,10 +224,17 @@ $(function(){
 
     $(".choice-nav-wrap ul:nth-of-type(1) li:nth-of-type(2)").click(function(){
         let review=$("#review");
-        let offset=review.offset().top-180;
+        let offset=review.offset().top-210;
 
         $("html").animate({scrollTop:offset},300);
     });
+
+    $(".title2-1 ul:nth-of-type(3) li:nth-of-type(2) a").click(function(){
+        let review=$("#review");
+        let offset=review.offset().top-210;
+
+        $("html").animate({scrollTop:offset},300);
+    })
 
     $(".choice-nav-wrap ul:nth-of-type(1) li:nth-of-type(3)").click(function(){
         let delivery=$("#delivery");
