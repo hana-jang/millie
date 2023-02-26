@@ -154,11 +154,6 @@ $(function(){
         confirm("로그인이 필요합니다. \n로그인 하시겠습니까?");
     });
 
-    // top버튼 누르면 부드럽게 위로 고고
-    $("#topbtn").click(function(){
-        $('html').animate({scrollTop:0},400);
-    });
-
     
     // 도서정보 탭 클릭 이벤트
     // $(".choice-nav-wrap ul:nth-of-type(1) li").click(function(){
@@ -199,14 +194,6 @@ $(function(){
             $(".choice-nav-wrap ul:nth-of-type(1) li").eq(2).siblings().removeClass("cho-nav-bg");
             $(".choice-nav-wrap ul:nth-of-type(1) li").eq(2).siblings().children().removeClass("cho-nav-font");
         }
-
-        if(scroll > 300){
-            $("#topbtn").fadeIn();
-        }
-        if(scroll<300){
-            $("#topbtn").fadeOut();
-        }
-
         if(scroll>1220){
             $("#choice-nav").css({"position":"fixed","top":"63px","z-index":"10"});
         }

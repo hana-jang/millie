@@ -1,5 +1,21 @@
 $(function () {
-    
+    // top버튼 누르면 부드럽게 위로 고고
+    $("#topbtn").click(function(){
+        $('html').animate({scrollTop:0},400);
+    });
+
+    $(window).scroll(function(){
+        var scroll=$(window).scrollTop();
+        console.log(scroll);
+        if(scroll > 300){
+            $("#topbtn").fadeIn();
+        }
+        if(scroll<300){
+            $("#topbtn").fadeOut();
+        }
+    })
+
+
     // footer
     var count = 0;
     $(".imformation p").click(function () {

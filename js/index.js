@@ -213,13 +213,6 @@ $(function(){
         if(scroll>5600){
             $(".second-call-book-wrap").hide();
         }
-
-        if(scroll > 300){
-            $("#topbtn").fadeIn();
-        }
-        if(scroll<300){
-            $("#topbtn").fadeOut();
-        }
     });
 });
 
