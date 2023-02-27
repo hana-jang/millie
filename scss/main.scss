@@ -1128,20 +1128,24 @@ h2{
     width:450px;
     height:56px;
     margin:0 auto;
-    padding:16px 0;
     background-color:#333;
-    color:#fff;
     font-size:16px;
     border:none;
     border-radius: 40px;
     position:fixed;
     display:block;
-    // display:none;
     z-index:100;
     bottom:16px;
     left:50%;
     transform:translateX(-50%);
-    cursor: pointer;
+    a{
+        width:450px;
+        height:56px;
+        padding:16px 0;
+        display:inline-block;
+        color:#fff;
+        text-align: center;
+    }
 }
 
 #topbtn{
