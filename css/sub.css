@@ -228,7 +228,7 @@ header {
 #title .title-wrap .title-two .title2-2 .sec1 .sec1-2 table th {
   width: 100px;
   text-align: left;
-  padding-top: 15px 0;
+  padding-top: 15px;
   font-weight: normal;
 }
 #title .title-wrap .title-two .title2-2 .sec1 .sec1-2 table td {
@@ -240,7 +240,7 @@ header {
 #title .title-wrap .title-two .title2-2 .sec1 .sec1-3 table th {
   width: 100px;
   text-align: left;
-  padding-top: 15px 0;
+  padding-top: 15px;
   font-weight: normal;
 }
 #title .title-wrap .title-two .title2-2 .sec1 .sec1-3 table td {
