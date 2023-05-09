@@ -23,7 +23,7 @@ $(function(){
         case 6: day="토요일";
         break;
     }
-    $(".sec1-3-1 span").eq(1).html("<u>오늘(" +month+"/"+date+", "+day+")</u> 도착예정")
+    $(".delivery-1 span").eq(1).html("<u>오늘(" +month+"/"+date+", "+day+")</u> 도착예정")
 
 
     // 수량 버튼 누르면 숫자 변경
@@ -33,6 +33,7 @@ $(function(){
     document.getElementById("minus").onclick=function(){
         result--;
         input.value=result;
+        // console.log(result);
         if(result<=0){
             alert("최소 1권 이상부터 구매 가능합니다");
             input.value=1;
@@ -153,9 +154,11 @@ $(function(){
         confirm("로그인이 필요합니다. \n로그인 하시겠습니까?");
     });
 
+
     // 도서정보, 리뷰, 배송반품교환(choice-nav) 버튼 눌러서 내려간 다음에 top버튼으로 올라올 경우 첫번째만 css 들어가게 하기
     $(window).scroll(function () {
         var scroll=$(window).scrollTop();
+        // console.log(scroll);
         if (scroll<=500){
             $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).addClass("cho-nav-bg");
             $(".choice-nav-wrap ul:nth-of-type(1) li").eq(0).children().addClass("cho-nav-font");

@@ -67,7 +67,7 @@ header{background-color:#fff;}
         display: flex;
         justify-content: space-between;
 
-        .title-one {
+        .title-img {
             img {
                 width: 400px;
                 height:600px;
@@ -75,12 +75,12 @@ header{background-color:#fff;}
             }
         }
 
-        .title-two {
+        .title-main {
             ul {
                 display: flex;
             }
 
-            .title2-1 {
+            .title-top {
                 width: 760px;
                 padding-bottom: 25px;
                 border-bottom: 1px solid #e5e5e5;
@@ -214,14 +214,14 @@ header{background-color:#fff;}
                 }
             }
 
-            .title2-2 {
+            .title-middle {
                 display: flex;
                 font-size:14px;
-                .sec1 {
+                .middle-price {
                     width: 70%;
                     padding: 20px 0;
 
-                    .sec1-1 {
+                    .middle-price-table {
                         width:500px;
                         font-size:14px;
                         border-bottom: 1px solid #e5e5e5;
@@ -263,7 +263,7 @@ header{background-color:#fff;}
                             }
                         }
                     }
-                    .sec1-2 {
+                    .middle-price-card {
                         width:500px;
                         border-bottom:1px solid #e5e5e5;
                         table {
@@ -271,7 +271,7 @@ header{background-color:#fff;}
                             th {
                                 width: 100px;
                                 text-align: left;
-                                padding-top: 15px;
+                                // padding-top: 15px;
                                 font-weight: normal;
                             }
                             td {
@@ -279,13 +279,13 @@ header{background-color:#fff;}
                             }
                         }
                     }
-                    .sec1-3{
+                    .middle-price-delivery{
                         table {
                             border-collapse: collapse;
                             th {
                                 width: 100px;
                                 text-align: left;
-                                padding-top: 15px;
+                                // padding-top: 15px;
                                 font-weight: normal;
                             }
                             td {
@@ -298,7 +298,7 @@ header{background-color:#fff;}
                                 }
                             }
                         }
-                        .sec1-3-1{
+                        .delivery-1{
                             width:500px;
                             background-color: #ffeb60;
                             padding:15px;
@@ -313,18 +313,18 @@ header{background-color:#fff;}
                                 font-size:14px;
                             }
                         }
-                        .sec1-3-2{
+                        .delivery-2{
                             margin-top:10px;
                             color:#666;
                         }
                     }
                 }
-                .sec2{
+                .title-middle-right{
                     width:30%;
                     height:447px;
                     padding:20px;
                     background-color:#eeeeee;
-                    .sec2-1{
+                    .middle-right-buy{
                         border-bottom:1px solid #d8d8d8;
                         p{
                             font-weight: bold;
@@ -373,7 +373,7 @@ header{background-color:#fff;}
                             cursor: pointer;
                         }
                     }
-                    .sec2-2{
+                    .middle-right-btn{
                         >ul{
                             display:flex;
                             flex-direction: column;
